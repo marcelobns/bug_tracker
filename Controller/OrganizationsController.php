@@ -1,44 +1,33 @@
 <?php
 App::uses('AppController', 'Controller');
-/**
- * Organizations Controller
- *
- * @property Organization $Organization
- * @property PaginatorComponent $Paginator
- */
 class OrganizationsController extends AppController {
 
-/**
- * Components
- *
- * @var array
- */
 	public $components = array('Paginator');
 
-/**
- * index method
- *
- * @return void
- */
 	public function index() {
-		$this->Organization->recursive = 0;
+        $conditions = array(
+            'Organization.id not in'=>array(1, $this->Session->read('Auth.User.organization_id')),
+            $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)'
+        );
+        if(@$_GET['q']){
+            $_GET['q'] = is_numeric($_GET['q']) ? $_GET['q'] : '%'.$_GET['q'].'%';
+            $conditions = array(
+                'Organization.id not in'=>array(1, $this->Session->read('Auth.User.organization_id')),
+                $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)',
+                'OR'=>array(
+                    'Organization.id::text ilike \''.$_GET['q'].'\'',
+                    'Organization.name::text ilike \''.$_GET['q'].'\'',
+                )
+            );
+        }
         $this->paginate = array(
-            'conditions' => array(
-                'Organization.id != 1',
-                $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)'
-            ),
+            'recursive'=>0,
+            'conditions'=>$conditions,
             'order' => array('Organization.parent_id'=>'ASC', 'Organization.name'=>'ASC')
         );
 		$this->set('organizations', $this->Paginator->paginate());
 	}
 
-/**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function view($id = null) {
 		if (!$this->Organization->exists($id)) {
 			throw new NotFoundException(__('Invalid organization'));
@@ -47,11 +36,6 @@ class OrganizationsController extends AppController {
 		$this->set('organization', $this->Organization->find('first', $options));
 	}
 
-/**
- * add method
- *
- * @return void
- */
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Organization->create();
@@ -66,13 +50,6 @@ class OrganizationsController extends AppController {
 		$this->set(compact('parents'));
 	}
 
-/**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function edit($id = null) {
 		if (!$this->Organization->exists($id)) {
 			throw new NotFoundException(__('Invalid organization'));
@@ -95,13 +72,6 @@ class OrganizationsController extends AppController {
 		$this->set(compact('parents'));
 	}
 
-/**
- * delete method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function delete($id = null) {
 		$this->Organization->id = $id;
 		if (!$this->Organization->exists()) {

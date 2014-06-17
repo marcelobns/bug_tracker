@@ -72,7 +72,6 @@ class Product extends AppModel {
 			'order' => ''
 		)
 	);
-
 /**
  * hasMany associations
  *
@@ -93,5 +92,4 @@ class Product extends AppModel {
 			'counterQuery' => ''
 		)
 	);
-
 }

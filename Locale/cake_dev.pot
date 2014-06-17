@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-03-20 15:35-0400\n"
+"POT-Creation-Date: 2014-06-16 08:49-0400\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -15,11 +15,15 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: View/Layouts/default.ctp:2
-msgid "Tracker"
+msgid "BugTracker"
 msgstr ""
 
 #: View/Layouts/error.ctp:19
 msgid "CakePHP: the rapid development php framework"
+msgstr ""
+
+#: View/Layouts/printable.ctp:2
+msgid "Tracker"
 msgstr ""
 
 #: View/Layouts/signin.ctp:2

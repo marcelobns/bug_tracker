@@ -1,29 +1,23 @@
-<div class="container">
-    <div id="content">
-        <div class="form-signin">
-            <div class="signin-top"></div>
-            <div class="signin-inputs">
-                <span style="
-                        color: #868686;
-                        text-shadow: 1px 1px #b9b9b9,
-                                    -1px -1px #696969;
-                        float: right;
-                        margin-top: -60px;
-                        margin-right: 15px; opacity: 0.7" >
-                    <i class="fa fa-bug fa-3x"></i>
-                    <i class="fa fa-map-marker fa-3x"></i>
+<div class="container" style="width: 450px;">
+    <div>
+        <div style="margin-top:30px; padding: 10px; border-radius: 4px;  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3),
+                                                                    0 3px 7px rgba(0, 0, 0, 0.3),
+                                                                    inset 0 1px rgba(255, 255, 255, 1),
+                                                                    inset 0 0 2px rgba(0, 0, 0, 0.25);">
+            <h3 style="padding-top: 5px; color: #F9F9F9; text-shadow: 1px 1px white, -1px -1px lightgray;">
+                <?=__('Bugs');?>
+                <span class="pull-right">
+                    <i class="fa fa-bug fa-2x" style="line-height: 0.5;"></i>
+                    <i class="fa fa-map-marker fa-2x" style="line-height: 0.5;"></i>
                 </span>
-                <?php echo $this->Form->create('User', array('url'=>array('action'=>'signin'))); ?>
-                <section class="user-box">
-                    <i class="fa fa-user fa-5x"></i>
-                </section>
-                <section class="input-box">
-                <?php echo $this->Form->input('username', array('placeholder'=>__('Username'), 'autofocus', 'label'=>false)); ?>
+            </h3>
+            <?php echo $this->Form->create('User', array('url'=>array('action'=>'signin'))); ?>
+            <fieldset style="margin: 30px;">
+                <?php echo $this->Form->input('username', array('placeholder'=>__('Username'), 'autofocus'=>true, 'label'=>false)); ?>
                 <?php echo $this->Form->input('password', array('type'=>'password', 'placeholder'=>__('Password'), 'label'=>false)); ?>
-                </section>
-                <?php echo $this->Form->button('<b>'.__('Enter').'</b>', array('type'=>'submit', 'class'=>'btn btn-primary btn-lg btn-block')); ?>
-                <?php echo $this->Form->end(); ?>
-            </div>
+                <?php echo $this->Form->button(__('Enter'), array('type'=>'submit', 'class'=>'btn btn-default btn-block')); ?>
+            </fieldset>
+            <?php echo $this->Form->end(); ?>
         </div>
     </div>
 </div>

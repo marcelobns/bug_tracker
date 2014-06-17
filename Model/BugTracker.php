@@ -9,18 +9,8 @@ App::uses('AppModel', 'Model');
  */
 class BugTracker extends AppModel {
 
-/**
- * Use table
- *
- * @var mixed False or table name
- */
 	public $useTable = 'bug_tracker';
 
-/**
- * Validation rules
- *
- * @var array
- */
 	public $validate = array(
 		'bug_id' => array(
 			'numeric' => array(
@@ -35,62 +25,27 @@ class BugTracker extends AppModel {
 		'situation_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'details' => array(
-//			'notEmpty' => array(
-//				'rule' => array('notEmpty'),
-//				//'message' => 'Your custom message here',
-//				//'allowEmpty' => false,
-//				//'required' => false,
-//				//'last' => false, // Stop validation after this rule
-//				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-//			),
 		),
 		'organization_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'created_by' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'updated_by' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 	);
 
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * belongsTo associations
- *
- * @var array
- */
 	public $belongsTo = array(
 		'Bug' => array(
 			'className' => 'Bug',
@@ -99,9 +54,9 @@ class BugTracker extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-        'User' => array(
+        'Technician' => array(
             'className' => 'User',
-            'foreignKey' => 'technician_id',
+            'foreignKey' => 'technician_array[1]',
             'conditions' => '',
             'fields' => '',
             'order' => ''
@@ -119,6 +74,13 @@ class BugTracker extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		)
+		),
+        'Creator' => array(
+            'className' => 'User',
+            'foreignKey' => 'created_by',
+            'conditions' => '',
+            'fields' => '',
+            'order' => ''
+        )
 	);
 }

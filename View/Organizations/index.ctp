@@ -1,13 +1,17 @@
 <div class="organizations index">
-	<h2><?php echo __('Organizations'); ?></h2>
+	<legend><?php echo __('Organizations'); ?> <?php echo $this->Html->link(' <i class="fa fa-refresh refresh"></i>', array('action' => 'index'), array('escape'=>false)); ?>
+        <div class="pull-right">
+            <?=$this->element('form.search', array('model'=>'Organization'));?>
+        </div>
+    </legend>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('parent_id'); ?></th>
-			<th class="action-add">
-                <?php echo $this->Html->link('<i class="fa fa-plus fa-lg"></i> '.__('New Organization'), array('action' => 'add'), array('escape'=>false)); ?>
-			</th>
+        <th><?php echo $this->Paginator->sort('id'); ?></th>
+        <th><?php echo $this->Paginator->sort('name'); ?></th>
+        <th><?php echo $this->Paginator->sort('parent_id'); ?></th>
+        <th class="action-add">
+            <?php echo $this->Html->link('<i class="fa fa-plus-square-o"></i> '.__('New Organization'), array('action' => 'add'), array('escape'=>false)); ?>
+        </th>
 	</tr>
 	<?php foreach ($organizations as $organization): ?>
 	<tr>

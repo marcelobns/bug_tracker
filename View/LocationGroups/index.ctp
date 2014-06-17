@@ -13,7 +13,7 @@
 		<td><?php echo h($locationGroup['LocationGroup']['id']); ?>&nbsp;</td>
 		<td><?php echo h($locationGroup['LocationGroup']['name']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link('<i class="fa fa-file-text-o fa-lg"></i>', array('action' => 'view', $locationGroup['LocationGroup']['id']), array('escape'=>false)); ?>
+			<?php// echo $this->Html->link('<i class="fa fa-file-text-o fa-lg"></i>', array('action' => 'view', $locationGroup['LocationGroup']['id']), array('escape'=>false)); ?>
 			<?php echo $this->Html->link('<i class="fa fa-pencil fa-lg"></i>', array('action' => 'edit', $locationGroup['LocationGroup']['id']), array('escape'=>false)); ?>
 			<?php echo $this->Form->postLink('<i class="fa fa-trash-o fa-lg"></i>', array('action' => 'delete', $locationGroup['LocationGroup']['id']), array('escape'=>false), __('Are you sure you want to delete # %s?', $locationGroup['LocationGroup']['id'])); ?>
 		</td>

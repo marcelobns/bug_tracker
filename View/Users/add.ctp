@@ -14,10 +14,13 @@
 
         echo $this->Form->input('organization_id', array('class'=>'select2', 'empty'=>__('Select an Item...')));
         echo $this->Form->input('role_id', array('class'=>'select2', 'empty'=>__('Select an Item...')));
+        if($this->Session->read('Auth.User.Role.sort') <= 2){
+            echo $this->Form->input('requestor', array('options' => array(false=>__('NO'), true=>__('YES'))));
+        }
         ?>
+        <?php echo $this->Form->button(__('Submit'), array('type'=>'submit', 'class'=>'btn btn-success')); ?>
+        <?php echo $this->Html->link(__('Cancel'), $this->request->referer(), array('class'=>'btn btn-default')); ?>
     </fieldset>
-    <?php echo $this->Form->button(__('Submit'), array('type'=>'submit', 'class'=>'btn btn-success btn-lg')); ?>
-    <?php echo $this->Html->link(__('Cancel'), $this->request->referer(), array('class'=>'btn btn-default btn-lg')); ?>
     <?php echo $this->Form->end(); ?>
 </div>
 <div class="actions">

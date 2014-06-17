@@ -32,20 +32,5 @@ class LocationGroup extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
-		'Bug' => array(
-			'className' => 'Bug',
-			'foreignKey' => 'location_group_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
 
 }

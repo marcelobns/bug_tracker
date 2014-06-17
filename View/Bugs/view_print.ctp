@@ -50,9 +50,9 @@
         <?php echo h($bug['Priority']['name']); ?>
         &nbsp;
     </dd>
-    <dt><?php echo __('Location Group'); ?></dt>
+    <dt><?php echo __('Organization'); ?></dt>
     <dd>
-        <?php echo h($bug['LocationGroup']['name']); ?>
+        <?php echo h($bug['Organization']['name']); ?>
         &nbsp;
     </dd>
     <dt><?php echo __('Location'); ?></dt>

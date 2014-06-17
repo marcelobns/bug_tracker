@@ -21,19 +21,29 @@ class UsersController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->User->recursive = 0;
+        $conditions = array(
+            $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)'
+        );
+        if(@$_GET['q']){
+            $_GET['q'] = is_numeric($_GET['q']) ? $_GET['q'] : '%'.$_GET['q'].'%';
+            $conditions = array(
+                $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)',
+                'OR'=>array(
+                    'User.id::text ilike \''.$_GET['q'].'\'',
+                    'User.name::text ilike \''.$_GET['q'].'\'',
+                    'User.username::text ilike \''.$_GET['q'].'\'',
+                )
+            );
+        }
         $this->paginate = array(
             'fields' => array(
                 'User.id',
                 'User.name',
-                'User.username',
                 'User.last_signin',
-                'Organization.*',
-                'Role.*'
+                'Organization.name',
+                'Role.name'
             ),
-            'conditions' => array(
-                $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)'
-            ),
+            'conditions' => $conditions,
             'order' => array('name'=>'ASC')
         );
 		$this->set('users', $this->Paginator->paginate());

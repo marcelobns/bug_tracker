@@ -18,19 +18,20 @@
 
         if($isUser){
             echo $this->Form->input('username', array('disabled'));
+            echo $this->Form->input('confirm_password', array('type'=>'password', 'label'=>'Current Password'));
             echo $this->Form->input('password', array('value'=>'', 'section'=>'password', 'label'=>'New Password'));
             echo '<span class="help-block 1"><a href="#password" id="editPassword">'.__('edit password').'</a></span>';
             echo '<span class="help-block 2" style="display: none;"><a href="#password" id="closePassword">'.__('close password').'</a></span>';
-            echo $this->Form->input('confirm_password', array('type'=>'password', 'label'=>'Current Password'));
         }
         if($isUser || $this->Session->read('Auth.User.Role.sort') < $role_sort){
             echo $this->Form->input('organization_id', array('class'=>'select2', 'empty'=>__('Select an Item...')));
             echo $this->Form->input('role_id', array('class'=>'select2', 'empty'=>__('Select an Item...')));
+            echo $this->Form->input('requestor', array('options' => array(false=>__('NO'), true=>__('YES'))));
         }
 	    ?>
+        <?php echo $this->Form->button(__('Submit'), array('type'=>'submit', 'class'=>'btn btn-success')); ?>
+        <?php echo $this->Html->link(__('Cancel'), $this->request->referer(), array('class'=>'btn btn-default')); ?>
 	</fieldset>
-    <?php echo $this->Form->button(__('Submit'), array('type'=>'submit', 'class'=>'btn btn-success btn-lg')); ?>
-    <?php echo $this->Html->link(__('Cancel'), $this->request->referer(), array('class'=>'btn btn-default btn-lg')); ?>
     <?php echo $this->Form->end(); ?>
 </div>
 <div class="actions actions-toggle">

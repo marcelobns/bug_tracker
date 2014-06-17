@@ -1,40 +1,22 @@
 @charset "utf-8";
-/**
- *
- * Generic CSS for CakePHP
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.webroot.css
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
 * {
 	margin:0;
 	padding:0;
 }
-
 /** General Style Info **/
 body {
-	color: #fff;
+	color: #f5f5f5;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
-	font-size:90%;
+	font-size:75%;
     height: 100%;
 }
 a {
 	color: #003d4c;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: bold!important;
 }
 a:hover {
-	color: #367889;
+	color: #367889!important;
 	text-decoration:none;
 }
 a img {
@@ -45,12 +27,10 @@ h1, h2, h3, h4 {
 	margin-bottom:0.5em;
 }
 h1 {
-	background:#fff;
 	color: #003d4c;
 	font-size: 100%;
 }
 h2 {
-	background:#fff;
 	color: #e32;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
 	font-size: 190%;
@@ -77,18 +57,17 @@ p {
 }
 
 #header{
-    background: #003d4c;
-	padding: 10px 10px;
-    height: 45px;
+    background: #404040;
+    min-height: 50px;
 }
 #header h1 {
 	line-height:40px;
 	background: #003d4c url('../img/cake.icon.png') no-repeat left;
-	color: #fff;
+	color: #f5f5f5;
 	padding: 0px 30px;
 }
 #header h1 a {
-	color: #fff;
+    color: #f5f5f5;
 	background: #003d4c;
 	font-weight: normal;
 	text-decoration: none;
@@ -101,18 +80,19 @@ p {
 #content{
 	clear: both;
 	color: #333;
-	padding: 10px 20px 40px 20px;
+	padding: 5px 20px 40px 20px;
 	overflow: hidden;
+    background-color: #FEFEFE;
 }
 #footer {
-    background: #003d4c;
+    background: #404040;
     position: fixed;
     bottom: 0;
     width: 100%;
     min-height: 30px;
 }
 #header a, #footer a {
-	color: #fff;
+    color: #fafafa;
 }
 
 /** containers **/
@@ -124,6 +104,12 @@ div.view {
 	border-left:1px solid #666;
 	padding:10px 2%;
 }
+div.index.large{
+    width: 100%;
+    float: none;
+    padding: 0px;
+    border: none;
+}
 div.actions {
 	float:left;
 	width:16%;
@@ -131,7 +117,7 @@ div.actions {
 }
 div.actions h3 {
 	padding-top:0;
-	color:#777;
+	color:#bbb;
 }
 
 /** Tables **/
@@ -146,7 +132,6 @@ th {
 	border:0;
 	border-bottom:2px solid #555;
 	text-align: left;
-    padding: 4px 4px 4px 0px;
 }
 th a {
 	display: block;
@@ -184,6 +169,7 @@ table td.actions a {
 th.action-add{
     text-align: center;
     font-size: 1.15em;
+    background-color: #f5f5f5;
 }
 
 /* SQL log */
@@ -202,6 +188,10 @@ th.action-add{
 }
 
 /** Paging **/
+.index p{
+    font-weight: bold;
+    color: #367889;
+}
 .paging {
 	background:#fff;
 	color: #ccc;
@@ -249,6 +239,7 @@ th.action-add{
 dl {
 	line-height: 2em;
 	margin: 0em 0em;
+    margin-bottom: 20px;
 	width: 100%;
 }
 
@@ -282,7 +273,7 @@ fieldset {
 }
 legend {
 	color: #e32!important;
-	font-size: 190%!important;
+	font-size: 1.8em!important;
     font-family: 'Gill Sans','lucida grande', helvetica, arial, sans-serif;
 }
 fieldset fieldset {
@@ -300,7 +291,6 @@ fieldset fieldset div {
 form div {
 	clear: both;
 	margin-bottom: 1em;
-	padding: .1em;
 	vertical-align: text-top;
 }
 form .input {
@@ -342,6 +332,9 @@ select {
     width:100%;
     padding: 1%;
 }
+.datetime select{
+    width: auto;
+}
 select[multiple=multiple] {
 	width: 100%;
 }
@@ -349,11 +342,12 @@ option {
 	font-size: 120%;
 	padding: 0 3px;
 }
-input[type=checkbox] {
+input[type=checkbox]{
 	clear: left;
 	float: left;
 	margin: 0px 6px 7px 2px;
 	width: auto;
+    border: 1px solid red;
 }
 div.checkbox label {
 	display: inline;
@@ -377,7 +371,9 @@ form .submit input[type=submit] {
 	background:#62af56;
 	border-color: #2d6324;
 	color: #fff;
-	padding: 12px 16px;
+	padding: 1%;
+    width: 98%;
+    margin: 0 1%;
 }
 form .submit input[type=submit]:hover {
 	background: #5BA150;
@@ -418,7 +414,6 @@ form .error-message {
 	font-size: 110%;
 	font-weight: bold;
     position: fixed;
-    right: 20px;
     z-index: 999;
 }
 .message span{
@@ -538,6 +533,8 @@ input[type=submit]:active,
 .related {
 	clear: both;
 	display: block;
+    padding: 20px 30px 50px 10px;
+    font-size: 1.12em;
 }
 
 /** Debugging **/
@@ -727,7 +724,6 @@ pre {
     opacity: 0.75;
     cursor: pointer!important;
 }
-
 .msg-col{
     padding: 0px;
     display: block;
@@ -746,18 +742,16 @@ pre {
     color: #ffffff;
 }
 .input-search{
-    font-size: 120%;
-    padding: 3%;
-    width: 93.5%;
+    font-size: 0.75em;
+    padding: 0em 0.5em;
+    border-radius: 0px;
 }
 .btn-search{
-    margin-top: -0.1px;
-    height: 102%;
-    min-height: 35px;
-    width: 40px;
-    border: none;
+    border-radius: 0px;
+    padding: 0.55em;
+    /*border:none;*/
+    /*background: none;*/
 }
-
 #actions-btn{
     position: absolute;
     width: 20%
@@ -781,25 +775,44 @@ pre {
     padding-right: 5px;
     width: 10px;
 }
-
-.filter{
-    float: right;
-    margin-right: 45px;
-    color: #999;
+.refresh {
+    color: #eee;
+    font-size: 0.9em;
 }
-#filter{
-    padding-bottom: 15px;
+.refresh:hover {
+    color: #bbb;
+    font-size: 1em;
 }
-
 .uppercase {
     text-transform: uppercase!important;
 }
-th .btn-group .btn-link{
+.filter .btn-link{
     font-family: 'lucida grande',verdana,helvetica,arial,sans-serif;
     padding: 0px;
-    font-size: 1em;
-    text-decoration: none;
+    font-size: 0.9em;
+    text-decoration: none!important;
 }
-.date{
-    font-size: 1em;
+.filter span{
+    font-size: 0.9em;
+}
+.filter ul li button{
+    background-color:#E4E4E4;
+}
+.filter input{
+    font-size: 0.9em;
+}
+.filter .ctrl{
+    padding-left: 7px;
+    margin-bottom: 4px;
+}
+.filter label{
+    font-size: 0.7em;
+}
+.filter .dropdown-menu ul, li {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.filter .dropdown-menu .input-group {
+    margin: 5px;
+    margin-right: 8px;
 }

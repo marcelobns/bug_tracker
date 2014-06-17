@@ -1,5 +1,5 @@
 <?php
-$cakeDescription = __d('cake_dev', 'Tracker');
+$cakeDescription = __d('cake_dev', 'BugTracker');
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,33 +11,41 @@ $cakeDescription = __d('cake_dev', 'Tracker');
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-
+        echo $this->Html->css('bootstrap');
+        echo $this->Html->css('cake.generic');
+        echo $this->Html->css('font-awesome');
         echo $this->Html->css('select2/select2');
-		echo $this->Html->css('cake.generic');
-		echo $this->Html->css('bootstrap');
-		echo $this->Html->css('font-awesome');
-		echo $this->Html->css('smoothness/jquery-ui-1.10.4.custom.min');
-		echo $this->Html->css('custom');
+        echo $this->Html->css('smoothness/jquery-ui-1.10.4.custom.min');
+        echo $this->Html->css('custom');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 	?>
 </head>
 <body>
-    <div id="header">
-        <?php echo $this->Html->link('<i class="fa fa-bug fa-3x"></i><i class="fa fa-map-marker fa-3x"></i>', array('controller' => 'pages', 'action' => 'home'), array('escape'=>false, 'style'=>'color: #001f2d; text-shadow: 1px 1px #00586e, -1px -1px #001219;')); ?>
-        <div class="pull-right" style="margin-top: 10px; margin-right: 10px;">
-            <?php echo $this->Html->link($this->Session->read('Auth.User.name'), array('controller' => 'users', 'action' => 'edit', $this->Session->read('Auth.User.id')), array('escape'=>false)); ?>
-            <?php echo $this->Html->link('<i class="fa fa-power-off fa-lg"></i> ', array('controller' => 'users', 'action' => 'logout'), array('escape'=>false)); ?>
+    <div id="container">
+        <div id="header" class="navbar navbar-static-top" role="navigation">
+            <div class="navbar-header">
+                <?php echo $this->Html->link('<i class="fa fa-bug fa-2x" style="line-height: 0.5;"></i><i class="fa fa-map-marker fa-2x" style="line-height: 0.5;"></i>',
+                    array('controller'=>'pages', 'action' => 'home'),
+                    array('escape'=>false, 'class'=>'navbar-brand', 'style'=>'height: 0; color: #404040; text-shadow: 1px 1px darkgray, -1px -1px black;')); ?>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+                <ul class="nav navbar-nav navbar-right" style="margin-right: 0px;">
+                    <li><?php echo $this->Html->link($this->Session->read('Auth.User.name'), array('controller' => 'users', 'action' => 'edit', $this->Session->read('Auth.User.id')), array('escape'=>false)); ?></li>
+                    <li><?php echo $this->Html->link('<i style="color: darkorange;" class="fa fa-power-off fa-lg"></i> ', array('controller' => 'users', 'action' => 'logout'), array('escape'=>false)); ?></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div id="content">
-        <?php echo $this->Session->flash(); ?>
-        <?php echo $this->fetch('content'); ?>
-    </div>
-    <?php echo $this->element('sql_dump'); ?>
-    <div id="footer">
-        <?php echo $this->Html->link($this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),'#',array('escape' => false, 'class'=>'pull-right'));?>
+        <div id="content">
+            <?php echo $this->Session->flash(); ?>
+            <?php echo $this->fetch('content'); ?>
+        </div>
+<!--        --><?php //echo $this->element('sql_dump'); ?>
+        <div id="footer">
+            <?php echo $this->Html->link($this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),'#',array('escape' => false, 'class'=>'pull-right'));?>
+        </div>
     </div>
     <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog" style="width: 85%">
@@ -49,13 +57,13 @@ $cakeDescription = __d('cake_dev', 'Tracker');
         <i class="fa fa-spinner fa-spin fa-4x"></i>
     </div>
     <?php
-        echo $this->Html->script('jquery_2-1-0');
-        echo $this->Html->script('jquery-ui-1.10.4.custom.min');
-        echo $this->Html->script('jquery.maskedinput');
-        echo $this->Html->script('select2');
-        echo $this->Html->script('bootstrap');
-        echo $this->Html->script('modernizr.custom');
-        echo $this->Html->script('default');
+        echo $this->Html->script('modules/jquery_2-1-0');
+        echo $this->Html->script('modules/jquery-ui-1.10.4.custom.min');
+        echo $this->Html->script('modules/jquery.maskedinput');
+        echo $this->Html->script('modules/select2');
+        echo $this->Html->script('modules/bootstrap');
+        echo $this->Html->script('modules/modernizr.custom');
+        echo $this->Html->script('app/_main');
         echo $this->fetch('script');
     ?>
 </body>

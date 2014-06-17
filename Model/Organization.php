@@ -123,32 +123,54 @@ class Organization extends AppModel {
                 $return[$organization['Organization']['name']][$product['id']] = $product['name'];
             }
         }
-
         return $return;
     }
 
     function getChildOrganization($parent_id = null) {
+        $alias = $this->tableToModel['organizations'];
+        $this->unBindModel(array(
+            'hasMany' => array('Stock', 'Trade', 'User'),
+            'belongsTo' => array('ParentOrganization', 'OrganizationType')
+        ));
+        $parent_condition = $alias.'.parent_id != 0';
+        if($parent_id != null){
+            $parent_condition = $parent_id.' = ANY('.$alias.'.parent_array)';
+        }
         $organizations = $this->find('all', array(
                 'conditions' => array(
-                    $parent_id.' = ANY(Organization.parent_array)',
+                    $parent_condition,
+                    $alias.'.enabled'=>true
                 ),
-                'order' => array('Organization.id'=>'ASC', 'Organization.name'=>'ASC')
+                'order' => array($alias.'.id'=>'ASC', $alias.'.name'=>'ASC')
             )
         );
         $return = array();
-        $i = 0;
-        foreach ($organizations as $organization) {
+        foreach ($organizations as $i=>$organization) {
+            $acronym = ' ';
             if($i == 0)
-            $return[$organization['Organization']['name']][$organization['Organization']['id']] = $organization['Organization']['name'].' ';
-            $i++;
+                $return[$organization[$alias]['name']][$organization[$alias]['id']] = $organization[$alias]['name'].$acronym;
             foreach ($organization['ChildOrganization'] as $child) {
-                $acronym = ' ';
                 if(trim($child['acronym']) != ''){
                     $acronym = ' - '.$child['acronym'];
                 }
-                $return[$organization['Organization']['name']][$child['id']] = $child['name'].$acronym;
+                $return[$organization[$alias]['name']][$child['id']] = $child['name'].$acronym;
             }
         }
-        return $return;
+        if(sizeof($return) != 0){
+            return $return;
+        } else {
+            $this->unBindModel(array(
+                'hasMany' => array('Stock', 'Trade', 'User', 'ChildOrganization'),
+                'belongsTo' => array('ParentOrganization','OrganizationType')
+            ));
+            return $this->find('list', array(
+                    'recursive' => -1,
+                    'conditions' => array(
+                        $alias.'.enabled'=>true
+                    ),
+                    'order' => array($alias.'.name'=>'ASC')
+                )
+            );
+        }
     }
 }
