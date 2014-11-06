@@ -1,4 +1,4 @@
-<div class="products view">
+<div class="products view col-md-9">
 <h2><?php echo __('Product'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
@@ -28,6 +28,6 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
+<div class="actions col-md-3">
     <?=$this->element('side.generic');?>
 </div>

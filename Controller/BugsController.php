@@ -21,13 +21,12 @@ class BugsController extends AppController {
                     $role_clause
                 )));
         if(@$_GET['q']){
-            $_GET['q'] = is_numeric($_GET['q']) ? $_GET['q'] : '%'.$_GET['q'].'%';
+            $q = is_numeric($_GET['q']) ? $_GET['q'] : '%'.$_GET['q'].'%';
             $conditions = array(
-                'Bug.id::text ilike \''.$_GET['q'].'\'',
+                'Bug.id::text ilike \''.$q.'\'',
                 'OR'=>array(
                     $this->Session->read('Auth.User.id').' = ANY(BugTracker.technician_array)',
                     array(
-                        'BugTracker.technician_array is null',
                         $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)'
                     )));
         }
@@ -52,7 +51,6 @@ class BugsController extends AppController {
             $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)',
             $role_clause
         );
-
         if(isset($_GET['product']) && $_GET['product'] != ''){
             array_push($conditions, array('Product.id'=>$_GET['product']));
             $this->request->data['Bug']['product'] = $_GET['product'];
@@ -60,8 +58,6 @@ class BugsController extends AppController {
         if(isset($_GET['situation']) && $_GET['situation'] != ''){
             array_push($conditions, array('Situation.id'=>$_GET['situation']));
             $this->request->data['Bug']['situation'] = $_GET['situation'];
-        } else {
-            array_push($conditions, array('NOT' => array('Situation.archived'),));
         }
         if(isset($_GET['origin']) && $_GET['origin'] != ''){
             array_push($conditions, array('Origin.id'=>$_GET['origin']));
@@ -172,9 +168,8 @@ class BugsController extends AppController {
                 'Bug.*',
                 'Product.id', 'Product.name',
                 'Situation.id', 'Situation.name',
-                'Priority.id', 'Priority.name',
-                'Organization.id', 'Organization.name',
-                'User.id', 'User.name'
+                'Origin.id', 'Origin.name',
+                'Creator.id', 'Creator.name'
             ),
             'conditions' => array('Bug.' . $this->Bug->primaryKey => $id)
         );
@@ -204,11 +199,13 @@ class BugsController extends AppController {
         $origins = $this->Bug->Origin->getChildOrganization();
         $products = $this->Bug->Product->Organization->getProducts($this->Session->read('Auth.User.organization_id'));
         $technicians = $this->Bug->Technician->getList($this->Session->read('Auth.User.organization_id'));
-        $situations = $this->Bug->Situation->find('list', array(
+        $situation_open = $this->Bug->Situation->find('first', array(
+            'recursive'=>-1,
             'order'=>array('progress_order'=>'ASC'),
             'limit'=>1
         ));
-		$this->set(compact('products', 'situations', 'origins', 'technicians'));
+        $situation_open = $situation_open['Situation']['id'];
+		$this->set(compact('products', 'situation_open', 'origins', 'technicians'));
 	}
 
 	public function edit($id = null) {

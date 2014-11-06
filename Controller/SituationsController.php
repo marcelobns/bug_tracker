@@ -78,7 +78,9 @@ class SituationsController extends AppController {
 				$this->Session->setFlash(__('The situation could not be saved. Please, try again.'));
 			}
 		} else {
-			$options = array('conditions' => array('Situation.' . $this->Situation->primaryKey => $id));
+			$options = array(
+                'recursive'=>-1,
+                'conditions' => array('Situation.' . $this->Situation->primaryKey => $id));
 			$this->request->data = $this->Situation->find('first', $options);
 		}
 		$roles = $this->Situation->Role->find('list');

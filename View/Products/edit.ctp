@@ -1,12 +1,10 @@
-<div class="products form">
+<div class="products form col-md-9">
 <?php echo $this->Form->create('Product'); ?>
 	<fieldset>
-		<legend><?php echo __('Edit Product'); ?></legend>
+		<legend>Editar Produto</legend>
 	    <?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('name', array('class'=>'uppercase'));
-		echo $this->Form->input('description');
-		echo $this->Form->input('keywords');
 		echo $this->Form->input('organization_id');
         echo $this->Form->input('deadline', array('min'=>1));
 	    ?>
@@ -15,6 +13,6 @@
 	</fieldset>
     <?php echo $this->Form->end(); ?>
 </div>
-<div class="actions">
+<div class="actions col-md-3">
     <?=$this->element('side.generic');?>
 </div>

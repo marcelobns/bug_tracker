@@ -70,7 +70,7 @@ class ProductsController extends AppController {
 	}
 
     public function deadline($product_id = null, $technician_array = null){
-        //FIXME: REFATORAR!!!
+    //FIXME: REFATORAR!!!
         $hasTechnician = false;
         $conditions = array(
             'product_id'=>$product_id,
@@ -97,12 +97,9 @@ class ProductsController extends AppController {
             $result = $this->Product->query('
                                         SELECT
                                             min(p.deadline) as deadline,
-                                            (sum(p.deadline) * count(b.id))::integer as technician_deadline
+                                            2 as technician_deadline
                                         FROM products p
-                                        LEFT JOIN bugs b on p.id = b.product_id
-                                        LEFT JOIN bug_tracker bt on b.bug_tracker_id = bt.id
-                                        LEFT JOIN situations s on s.id = bt.situation_id
-                                        WHERE s.archived = false and p.id = :product_id ', array('product_id'=>$product_id));
+                                        WHERE p.id = :product_id ', array('product_id'=>$product_id));
             $hasTechnician = false;
         }
         $deadline = $result[0][0]['deadline'];
@@ -110,7 +107,6 @@ class ProductsController extends AppController {
         $result = $hasTechnician ? $technician_deadline : $deadline;
         $weekday = date('D', strtotime('+'.$result.' days'));
         $result = ($weekday == 'Sat' || $weekday == 'Sun') ? date('Y-m-d',strtotime('next monday')) : date('Y-m-d', strtotime('+'.$result.' days'));
-
         return new CakeResponse(array('body' => json_encode($result)));
     }
 }

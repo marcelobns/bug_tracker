@@ -25,9 +25,9 @@
         <?php echo h($bug['Bug']['id']); ?>
         &nbsp;
     </dd>
-    <dt><?php echo __('Reporter'); ?></dt>
+    <dt><?php echo __('Requestor'); ?></dt>
     <dd>
-        <?php echo h($bug['Bug']['reporter']); ?>
+        <?php echo h($bug['Bug']['requestor']); ?>
         &nbsp;
     </dd>
     <dt><?php echo __('Phone'); ?></dt>
@@ -45,19 +45,9 @@
         <?php echo h($bug['Product']['name']); ?>
         &nbsp;
     </dd>
-    <dt><?php echo __('Priority'); ?></dt>
+    <dt><?php echo __('Origin'); ?></dt>
     <dd>
-        <?php echo h($bug['Priority']['name']); ?>
-        &nbsp;
-    </dd>
-    <dt><?php echo __('Organization'); ?></dt>
-    <dd>
-        <?php echo h($bug['Organization']['name']); ?>
-        &nbsp;
-    </dd>
-    <dt><?php echo __('Location'); ?></dt>
-    <dd>
-        <?php echo h($bug['Bug']['location']); ?>
+        <?php echo h($bug['Origin']['name']); ?>
         &nbsp;
     </dd>
     <dt><?php echo __('Created'); ?></dt>
@@ -67,7 +57,7 @@
     </dd>
     <dt><?php echo __('Created By'); ?></dt>
     <dd>
-        <?php echo h($bug['User']['name']); ?>
+        <?php echo h($bug['Creator']['name']); ?>
         &nbsp;
     </dd>
 </dl>

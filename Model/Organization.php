@@ -1,21 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
-/**
- * Organization Model
- *
- * @property Organization $ParentOrganization
- * @property BugTracker $BugTracker
- * @property Organization $ChildOrganization
- * @property Product $Product
- * @property User $User
- */
 class Organization extends AppModel {
 
-/**
- * Validation rules
- *
- * @var array
- */
 	public $validate = array(
 		'name' => array(
 			'notEmpty' => array(
@@ -49,13 +35,6 @@ class Organization extends AppModel {
         ),
 	);
 
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * belongsTo associations
- *
- * @var array
- */
 	public $belongsTo = array(
 		'ParentOrganization' => array(
 			'className' => 'Organization',
@@ -66,11 +45,6 @@ class Organization extends AppModel {
 		)
 	);
 
-/**
- * hasMany associations
- *
- * @var array
- */
 	public $hasMany = array(
 		'ChildOrganization' => array(
 			'className' => 'Organization',
@@ -154,6 +128,7 @@ class Organization extends AppModel {
                     $acronym = ' - '.$child['acronym'];
                 }
                 $return[$organization[$alias]['name']][$child['id']] = $child['name'].$acronym;
+                $acronym = ' ';
             }
         }
         if(sizeof($return) != 0){

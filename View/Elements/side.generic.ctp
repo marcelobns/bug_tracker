@@ -1,5 +1,5 @@
-<h3><?php echo __('Actions'); ?></h3>
-<ul>
+<h4>Relacionado</h4>
+<ul class="nav nav-pills nav-stacked" role="tablist">
     <li><?php echo $this->Html->link('<i class="fa fa-bug fa-lg pull-right"></i> '.__('List Bugs'), array('controller' => 'bugs', 'action' => 'index'), array('escape'=>false)); ?> </li>
     <li><?php echo $this->Html->link('<i class="fa fa-rocket fa-lg pull-right"></i> '.__('List Products'), array('controller' => 'products', 'action' => 'index'), array('escape'=>false)); ?> </li>
     <li><?php echo $this->Html->link('<i class="fa fa-sitemap fa-lg pull-right"></i> '.__('List Organizations'), array('controller' => 'organizations', 'action' => 'index'), array('escape'=>false)); ?> </li>

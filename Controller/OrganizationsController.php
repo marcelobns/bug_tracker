@@ -10,13 +10,14 @@ class OrganizationsController extends AppController {
             $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)'
         );
         if(@$_GET['q']){
-            $_GET['q'] = is_numeric($_GET['q']) ? $_GET['q'] : '%'.$_GET['q'].'%';
+            $q = is_numeric($_GET['q']) ? $_GET['q'] : '%'.$_GET['q'].'%';
             $conditions = array(
                 'Organization.id not in'=>array(1, $this->Session->read('Auth.User.organization_id')),
                 $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)',
                 'OR'=>array(
-                    'Organization.id::text ilike \''.$_GET['q'].'\'',
-                    'Organization.name::text ilike \''.$_GET['q'].'\'',
+                    'Organization.id::text ilike \''.$q.'\'',
+                    'Organization.name::text ilike \''.$q.'\'',
+                    'Organization.acronym::text ilike \''.$q.'\'',
                 )
             );
         }

@@ -1,21 +1,19 @@
 <?php
-$cakeDescription = __d('cake_dev', 'BugTracker');
+$cakeDescription = __d('cake_dev', 'Demandas');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
+		<?php echo $title_for_layout; ?>:
+        <?php echo $cakeDescription ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-        echo $this->Html->css('bootstrap');
-        echo $this->Html->css('cake.generic');
-        echo $this->Html->css('font-awesome');
-        echo $this->Html->css('select2/select2');
-        echo $this->Html->css('smoothness/jquery-ui-1.10.4.custom.min');
+        echo $this->Html->css('modules/jquery-ui/jquery-ui');
+        echo $this->Html->css('modules/font-awesome');
+        echo $this->Html->css('build');
         echo $this->Html->css('custom');
 
 		echo $this->fetch('meta');
@@ -23,30 +21,50 @@ $cakeDescription = __d('cake_dev', 'BugTracker');
 	?>
 </head>
 <body>
-    <div id="container">
-        <div id="header" class="navbar navbar-static-top" role="navigation">
+        <header class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-header">
-                <?php echo $this->Html->link('<i class="fa fa-bug fa-2x" style="line-height: 0.5;"></i><i class="fa fa-map-marker fa-2x" style="line-height: 0.5;"></i>',
-                    array('controller'=>'pages', 'action' => 'home'),
-                    array('escape'=>false, 'class'=>'navbar-brand', 'style'=>'height: 0; color: #404040; text-shadow: 1px 1px darkgray, -1px -1px black;')); ?>
+                <?php echo $this->Html->link('<i class="fa fa-bug fa-lg"></i><i class="fa fa-map-marker fa-lg"></i>',
+                    array('controller'=>'bugs', 'action' => 'index'),
+                    array('escape'=>false, 'class'=>'navbar-brand', 'style'=>'color: #444;')); ?>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav"></ul>
+                <ul class="nav navbar-nav">
+                    <li><?php echo $this->Html->link('Demandas',
+                            array('controller'=>'bugs', 'action' => 'index')); ?></li>
+                    <li><?php echo $this->Html->link('Organizações',
+                            array('controller'=>'organizations', 'action' => 'index')); ?></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mais... <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><?php echo $this->Html->link('Produtos',
+                                    array('controller'=>'products', 'action' => 'index')); ?></li>
+                            <li><?php echo $this->Html->link('Situações',
+                                    array('controller'=>'situations', 'action' => 'index')); ?></li>
+                            <li><?php echo $this->Html->link('Usuários',
+                                    array('controller'=>'users', 'action' => 'index')); ?></li>
+                        </ul>
+                    </li>
+                </ul>
                 <ul class="nav navbar-nav navbar-right" style="margin-right: 0px;">
                     <li><?php echo $this->Html->link($this->Session->read('Auth.User.name'), array('controller' => 'users', 'action' => 'edit', $this->Session->read('Auth.User.id')), array('escape'=>false)); ?></li>
                     <li><?php echo $this->Html->link('<i style="color: darkorange;" class="fa fa-power-off fa-lg"></i> ', array('controller' => 'users', 'action' => 'logout'), array('escape'=>false)); ?></li>
                 </ul>
             </div>
-        </div>
-        <div id="content">
+        </header>
+        <main class="container">
             <?php echo $this->Session->flash(); ?>
             <?php echo $this->fetch('content'); ?>
-        </div>
-<!--        --><?php //echo $this->element('sql_dump'); ?>
-        <div id="footer">
+            <?php //echo $this->element('sql_dump'); ?>
+        </main>
+        <footer>
             <?php echo $this->Html->link($this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),'#',array('escape' => false, 'class'=>'pull-right'));?>
-        </div>
-    </div>
+        </footer>
     <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog" style="width: 85%">
             <div class="modal-content">
@@ -57,13 +75,11 @@ $cakeDescription = __d('cake_dev', 'BugTracker');
         <i class="fa fa-spinner fa-spin fa-4x"></i>
     </div>
     <?php
-        echo $this->Html->script('modules/jquery_2-1-0');
-        echo $this->Html->script('modules/jquery-ui-1.10.4.custom.min');
-        echo $this->Html->script('modules/jquery.maskedinput');
-        echo $this->Html->script('modules/select2');
-        echo $this->Html->script('modules/bootstrap');
-        echo $this->Html->script('modules/modernizr.custom');
-        echo $this->Html->script('app/_main');
+        echo $this->Html->script('modules/jquery-1.11.1.min');
+        echo $this->Html->script('modules/jquery-ui.js');
+        echo $this->Html->script('modules/jquery-ui-combobox');
+        echo $this->Html->script('modules/bootstrap.min');
+        echo $this->Html->script('custom');
         echo $this->fetch('script');
     ?>
 </body>

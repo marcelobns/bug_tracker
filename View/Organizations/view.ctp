@@ -1,4 +1,4 @@
-<div class="organizations view">
+<div class="organizations view col-md-9">
 <h2><?php echo __('Organization'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
@@ -33,6 +33,6 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
+<div class="actions col-md-3">
     <?=$this->element('side.generic');?>
 </div>

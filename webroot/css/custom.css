@@ -1,3 +1,26 @@
-.nav > li > a:hover, .nav > li > a:focus {
-    color: #00202d!important;
+#loading-indicator{
+    background-color: black;
+    opacity: 0.25;
+    overflow-y: auto;
+    z-index: 99999999;
+    text-align: center;
+    padding-top: 20%;
+    color: #ffffff;
+}
+th .filter > .btn{
+    margin: 0px;
+    padding: 0px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
 }

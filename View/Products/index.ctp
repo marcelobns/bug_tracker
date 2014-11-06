@@ -1,15 +1,17 @@
 <div class="products index">
 	<legend><?php echo __('Products'); ?></legend>
-	<table cellpadding="0" cellspacing="0">
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('organization_id'); ?></th>
+	<table  class="table table-condensed table-hover">
+        <thead>
+        <tr>
+            <th><?php echo $this->Paginator->sort('id'); ?></th>
+            <th><?php echo $this->Paginator->sort('name'); ?></th>
+            <th><?php echo $this->Paginator->sort('organization_id'); ?></th>
             <th><?php echo $this->Paginator->sort('deadline'); ?></th>
-			<th class="action-add" style="max-width: 90px;">
-                <?php echo $this->Html->link('<i class="fa fa-plus-square-o"></i> '.__('New Product'), array('action' => 'add'), array('escape'=>false)); ?>
+            <th class="actions">
+                <?php echo $this->Html->link(__('New Product'), array('action' => 'add'), array('escape'=>false)); ?>
             </th>
-	</tr>
+        </tr>
+        </thead>
 	<?php foreach ($products as $product): ?>
 	<tr>
 		<td><?php echo h($product['Product']['id']); ?>&nbsp;</td>
@@ -38,7 +40,4 @@
 		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
-</div>
-<div class="actions">
-    <?=$this->element('side.generic');?>
 </div>

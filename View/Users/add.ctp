@@ -1,7 +1,7 @@
-<div class="users form">
+<div class="users form col-md-9">
     <?php echo $this->Form->create('User'); ?>
     <fieldset>
-        <legend><?php echo __('Add User'); ?></legend>
+        <legend>Novo Usuário</legend>
         <?php
         echo $this->Form->input('name');
         echo $this->Form->input('email');
@@ -12,8 +12,8 @@
         echo $this->Form->input('password');
         echo $this->Form->input('confirm_password', array('type'=>'password'));
 
-        echo $this->Form->input('organization_id', array('class'=>'select2', 'empty'=>__('Select an Item...')));
-        echo $this->Form->input('role_id', array('class'=>'select2', 'empty'=>__('Select an Item...')));
+        echo $this->Form->input('organization_id', array('empty'=>__('Select an Item...')));
+        echo $this->Form->input('role_id', array('empty'=>__('Select an Item...')));
         if($this->Session->read('Auth.User.Role.sort') <= 2){
             echo $this->Form->input('requestor', array('options' => array(false=>__('NO'), true=>__('YES'))));
         }
@@ -23,7 +23,7 @@
     </fieldset>
     <?php echo $this->Form->end(); ?>
 </div>
-<div class="actions">
+<div class="actions col-md-3">
     <?=$this->element('side.generic');?>
 </div>
 <?php $this->start('script'); ?>

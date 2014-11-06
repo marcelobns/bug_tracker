@@ -1,7 +1,6 @@
 <div id="<?=$fields[0];?>Filter" class="btn-group filter">
-    <button class="btn btn-link"><?=$label;?></button>
     <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-        &nbsp;<span class="fa fa-filter"></span>
+        <b><?=$label;?></b> &nbsp;<span class="fa fa-filter"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
         <li class="ctrl">

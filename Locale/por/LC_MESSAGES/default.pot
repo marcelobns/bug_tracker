@@ -1,0 +1,1420 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2014-06-16 08:49-0400\n"
+"PO-Revision-Date: 2014-06-16 15:34-0400\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 1.6.5\n"
+
+#: Controller/BugAttachmentsController.php:37;72;100
+msgid "Invalid bug attachment"
+msgstr ""
+
+#: Controller/BugAttachmentsController.php:52;76
+msgid "The bug attachment has been saved."
+msgstr ""
+
+#: Controller/BugAttachmentsController.php:55;79
+msgid "The bug attachment could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/BugAttachmentsController.php:104
+msgid "The bug attachment has been deleted."
+msgstr ""
+
+#: Controller/BugAttachmentsController.php:106
+msgid "The bug attachment could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/BugTrackersController.php:20;86
+msgid "Invalid bug tracker"
+msgstr "Rastro Inválido."
+
+#: Controller/BugTrackersController.php:33
+msgid "The bug tracker has been saved."
+msgstr "Rastro salvo com sucesso"
+
+#: Controller/BugTrackersController.php:36
+msgid "The bug tracker could not be saved. Please, try again."
+msgstr "Rastro não pôde ser salvo. Tente novamente."
+
+#: Controller/BugTrackersController.php:90
+msgid "The bug tracker has been deleted."
+msgstr "Rastro deletado com sucesso."
+
+#: Controller/BugTrackersController.php:92
+msgid "The bug tracker could not be deleted. Please, try again."
+msgstr "Rastro não pôde ser deletado. Tente novamente."
+
+#: Controller/BugsController.php:127;160;209;249
+msgid "Invalid bug"
+msgstr "Demanda Inválida"
+
+#: Controller/BugsController.php:154 View/BugTrackers/view.ctp:9
+msgid "Bug"
+msgstr "Demanda"
+
+#: Controller/BugsController.php:191;221
+msgid "The bug has been saved."
+msgstr "Demanda salva com sucesso."
+
+#: Controller/BugsController.php:194;224
+msgid "The bug could not be saved. Please, try again."
+msgstr "Demanda não pôde ser salva. Tente novamente."
+
+#: Controller/BugsController.php:253
+msgid "The bug has been deleted."
+msgstr "Demanda deletada com sucesso."
+
+#: Controller/BugsController.php:255
+msgid "The bug could not be deleted. Please, try again."
+msgstr "Demanda não pôde ser deletada. Tente novamente."
+
+#: Controller/LocationGroupsController.php:37;69;94
+msgid "Invalid location group"
+msgstr ""
+
+#: Controller/LocationGroupsController.php:52;73
+msgid "The location group has been saved."
+msgstr ""
+
+#: Controller/LocationGroupsController.php:55;76
+msgid "The location group could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/LocationGroupsController.php:98
+msgid "The location group has been deleted."
+msgstr ""
+
+#: Controller/LocationGroupsController.php:100
+msgid "The location group could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/OrganizationsController.php:44;78;108
+msgid "Invalid organization"
+msgstr "Organização Inválida"
+
+#: Controller/OrganizationsController.php:59;82
+msgid "The organization has been saved."
+msgstr "Organização salva com sucesso."
+
+#: Controller/OrganizationsController.php:62;85
+msgid "The organization could not be saved. Please, try again."
+msgstr "Organização não pôde ser salva. Tente novamente."
+
+#: Controller/OrganizationsController.php:112
+msgid "The organization has been deleted."
+msgstr "Organização deletada com sucesso."
+
+#: Controller/OrganizationsController.php:114
+msgid "The organization could not be deleted. Please, try again."
+msgstr "Organização não pôde ser deletada."
+
+#: Controller/PrioritiesController.php:37;69;94
+msgid "Invalid priority"
+msgstr ""
+
+#: Controller/PrioritiesController.php:52;73
+msgid "The priority has been saved."
+msgstr ""
+
+#: Controller/PrioritiesController.php:55;76
+msgid "The priority could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PrioritiesController.php:98
+msgid "The priority has been deleted."
+msgstr ""
+
+#: Controller/PrioritiesController.php:100
+msgid "The priority could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ProductsController.php:19;41;61
+msgid "Invalid product"
+msgstr "Produto Inválido"
+
+#: Controller/ProductsController.php:29;45
+msgid "The product has been saved."
+msgstr "Produto salvo com sucesso."
+
+#: Controller/ProductsController.php:32;48
+msgid "The product could not be saved. Please, try again."
+msgstr "Produto não pode ser salvo. Tente novamente."
+
+#: Controller/ProductsController.php:65
+msgid "The product has been deleted."
+msgstr "Produto deletado com sucesso."
+
+#: Controller/ProductsController.php:67
+msgid "The product could not be deleted. Please, try again."
+msgstr "Produto não pôde ser deletado. Tente novamente."
+
+#: Controller/RolesController.php:37;69;94
+msgid "Invalid role"
+msgstr "Perfil Inválido."
+
+#: Controller/RolesController.php:52;73
+msgid "The role has been saved."
+msgstr "Perfil salvo com sucesso."
+
+#: Controller/RolesController.php:55;76
+msgid "The role could not be saved. Please, try again."
+msgstr "Perfil não pôde ser salvo."
+
+#: Controller/RolesController.php:98
+msgid "The role has been deleted."
+msgstr "Perfil deletado com sucesso."
+
+#: Controller/RolesController.php:100
+msgid "The role could not be deleted. Please, try again."
+msgstr "Perfil não pôde ser deletado."
+
+#: Controller/SituationsController.php:37;71;98
+msgid "Invalid situation"
+msgstr "Situação Inválida."
+
+#: Controller/SituationsController.php:52;75
+msgid "The situation has been saved."
+msgstr "Situação salva com sucesso."
+
+#: Controller/SituationsController.php:55;78
+msgid "The situation could not be saved. Please, try again."
+msgstr "Situação não pôde ser salva."
+
+#: Controller/SituationsController.php:102
+msgid "The situation has been deleted."
+msgstr ""
+
+#: Controller/SituationsController.php:104
+msgid "The situation could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:51;95;152
+msgid "Invalid user"
+msgstr ""
+
+#: Controller/UsersController.php:68;111;121
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:71;114;117;124
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:156
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:158
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:191
+msgid "Invalid! username or password."
+msgstr ""
+
+#: View/BugTrackers/add.ctp:6 View/BugTrackers/view.ctp:4
+#: View/LocationGroups/view.ctp:4;32 View/Organizations/view.ctp:4
+#: View/Priorities/view.ctp:4;37 View/Products/view.ctp:4
+#: View/Roles/view.ctp:4;39;72 View/Situations/view.ctp:4;46;89
+#: View/Users/view.ctp:4
+msgid "Id"
+msgstr "id"
+
+#: View/BugTrackers/add.ctp:11 View/BugTrackers/view.ctp:29
+#: View/Bugs/view.ctp:38;64 View/Bugs/view_print.ctp:63
+#: View/LocationGroups/view.ctp:43 View/Priorities/view.ctp:48
+#: View/Roles/view.ctp:80 View/Situations/view.ctp:51;100
+#: View/Users/view.ctp:39
+msgid "Created"
+msgstr "Criado em"
+
+#: View/BugTrackers/add.ctp:16 View/Bugs/view.ctp:3
+msgid "Origin"
+msgstr "Origem"
+
+#: View/BugTrackers/add.ctp:21 View/Bugs/view.ctp:8
+msgid "Requestor"
+msgstr "Solicitante"
+
+#: View/BugTrackers/add.ctp:26 View/Bugs/view.ctp:13
+#: View/Bugs/view_print.ctp:33 View/Roles/view.ctp:77 View/Users/view.ctp:24
+msgid "Phone"
+msgstr "Telefone"
+
+#: View/BugTrackers/add.ctp:31 View/Bugs/view.ctp:18
+#: View/Bugs/view_print.ctp:43 View/Products/view.ctp:2
+msgid "Product"
+msgstr "Produto"
+
+#: View/BugTrackers/add.ctp:36 View/BugTrackers/view.ctp:19
+#: View/Bugs/view.ctp:23;66 View/Bugs/view_print.ctp:38
+#: View/LocationGroups/view.ctp:35 View/Priorities/view.ctp:40
+#: View/Situations/view.ctp:49;92
+msgid "Details"
+msgstr "Detalhes"
+
+#: View/BugTrackers/add.ctp:41
+msgid "Deadline"
+msgstr "Prazo"
+
+#: View/BugTrackers/add.ctp:46 View/BugTrackers/view.ctp:14
+#: View/Bugs/view.ctp:28;65 View/Situations/view.ctp:2
+msgid "Situation"
+msgstr "Situação"
+
+#: View/BugTrackers/add.ctp:54
+msgid "New Deadline"
+msgstr "Novo Prazo"
+
+#: View/BugTrackers/add.ctp:55
+msgid "Next Situation"
+msgstr "Nova Situação"
+
+#: View/BugTrackers/add.ctp:57
+msgid "Change target"
+msgstr "Alterar Destino"
+
+#: View/BugTrackers/add.ctp:62 View/Bugs/add.ctp:16 View/Bugs/edit.ctp:13
+msgid "Technician"
+msgstr "Técnico"
+
+#: View/BugTrackers/add.ctp:63 View/BugTrackers/edit.ctp:15
+#: View/Bugs/add.ctp:22 View/Bugs/edit.ctp:16 View/LocationGroups/add.ctp:9
+#: View/LocationGroups/edit.ctp:10 View/Organizations/add.ctp:12
+#: View/Organizations/edit.ctp:13 View/Priorities/add.ctp:10
+#: View/Priorities/edit.ctp:11 View/Products/add.ctp:12
+#: View/Products/edit.ctp:13 View/Roles/add.ctp:10 View/Roles/edit.ctp:11
+#: View/Situations/add.ctp:11 View/Situations/edit.ctp:12
+#: View/Users/add.ctp:19 View/Users/edit.ctp:32
+msgid "Submit"
+msgstr "Enviar"
+
+#: View/BugTrackers/add.ctp:64 View/Bugs/add.ctp:23 View/Bugs/edit.ctp:17
+#: View/LocationGroups/add.ctp:10 View/LocationGroups/edit.ctp:11
+#: View/Organizations/add.ctp:13 View/Organizations/edit.ctp:14
+#: View/Products/add.ctp:13 View/Products/edit.ctp:14 View/Users/add.ctp:20
+#: View/Users/edit.ctp:33
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: View/BugTrackers/edit.ctp:4 View/BugTrackers/view.ctp:54
+msgid "Edit Bug Tracker"
+msgstr "Editar Rastro"
+
+#: View/BugTrackers/edit.ctp:18 View/BugTrackers/index.ctp:14;56
+#: View/BugTrackers/view.ctp:52 View/Bugs/view.ctp:51
+#: View/Elements/side.bugs.ctp:1 View/Elements/side.generic.ctp:1
+#: View/LocationGroups/view.ctp:17;47 View/Priorities/add.ctp:13
+#: View/Priorities/edit.ctp:14 View/Priorities/index.ctp:8;38
+#: View/Priorities/view.ctp:22;52 View/Roles/add.ctp:13 View/Roles/edit.ctp:14
+#: View/Roles/index.ctp:8;38 View/Roles/view.ctp:22;43;84
+#: View/Situations/add.ctp:14 View/Situations/edit.ctp:15
+#: View/Situations/index.ctp:9;42 View/Situations/view.ctp:27;55;104
+msgid "Actions"
+msgstr "Ações"
+
+#: View/BugTrackers/edit.ctp:21 View/BugTrackers/index.ctp:36
+#: View/LocationGroups/view.ctp:69 View/Priorities/edit.ctp:17
+#: View/Priorities/index.ctp:18 View/Priorities/view.ctp:74
+#: View/Roles/edit.ctp:17 View/Roles/index.ctp:18 View/Roles/view.ctp:54;103
+#: View/Situations/edit.ctp:18 View/Situations/index.ctp:22
+#: View/Situations/view.ctp:71;126
+msgid "Delete"
+msgstr "Deletar"
+
+#: View/BugTrackers/edit.ctp:21 View/BugTrackers/index.ctp:36
+#: View/BugTrackers/view.ctp:55 View/LocationGroups/index.ctp:18
+#: View/LocationGroups/view.ctp:20;69 View/Organizations/index.ctp:22
+#: View/Priorities/edit.ctp:17 View/Priorities/index.ctp:18
+#: View/Priorities/view.ctp:25;74 View/Products/index.ctp:22
+#: View/Roles/edit.ctp:17 View/Roles/index.ctp:18
+#: View/Roles/view.ctp:25;54;103 View/Situations/edit.ctp:18
+#: View/Situations/index.ctp:22 View/Situations/view.ctp:30;71;126
+msgid "Are you sure you want to delete # %s?"
+msgstr "Confirma exclusão # %s?"
+
+#: View/BugTrackers/edit.ctp:22 View/BugTrackers/view.ctp:56
+#: View/Situations/add.ctp:20 View/Situations/edit.ctp:22
+#: View/Situations/index.ctp:47 View/Situations/view.ctp:35
+msgid "List Bug Trackers"
+msgstr "Lista de Rastros"
+
+#: View/BugTrackers/edit.ctp:23 View/BugTrackers/index.ctp:59
+#: View/BugTrackers/view.ctp:58 View/Elements/side.bugs.ctp:3
+#: View/Elements/side.generic.ctp:13 View/LocationGroups/view.ctp:23
+#: View/Pages/home.ctp:13 View/Priorities/add.ctp:17
+#: View/Priorities/edit.ctp:19 View/Priorities/index.ctp:41
+#: View/Priorities/view.ctp:28 View/Situations/add.ctp:22
+#: View/Situations/edit.ctp:24 View/Situations/index.ctp:49
+#: View/Situations/view.ctp:37
+msgid "List Bugs"
+msgstr "Lista de Demandas"
+
+#: View/BugTrackers/edit.ctp:24 View/BugTrackers/index.ctp:60
+#: View/BugTrackers/view.ctp:59 View/Bugs/index.ctp:50
+#: View/LocationGroups/view.ctp:24 View/Pages/home.ctp:12
+#: View/Priorities/add.ctp:18 View/Priorities/edit.ctp:20
+#: View/Priorities/index.ctp:42 View/Priorities/view.ctp:29;83
+#: View/Situations/add.ctp:23 View/Situations/edit.ctp:25
+#: View/Situations/index.ctp:50 View/Situations/view.ctp:38;135
+msgid "New Bug"
+msgstr "Nova Demanda"
+
+#: View/BugTrackers/edit.ctp:25 View/BugTrackers/index.ctp:61
+#: View/BugTrackers/view.ctp:60 View/Elements/side.bugs.ctp:8
+#: View/Elements/side.generic.ctp:18 View/Pages/home.ctp:19
+#: View/Roles/add.ctp:17 View/Roles/edit.ctp:19 View/Roles/index.ctp:41
+#: View/Roles/view.ctp:28 View/Situations/add.ctp:17
+#: View/Situations/edit.ctp:19 View/Situations/view.ctp:31
+msgid "List Situations"
+msgstr "Lista de Situações"
+
+#: View/BugTrackers/edit.ctp:26 View/BugTrackers/index.ctp:62
+#: View/BugTrackers/view.ctp:61 View/Roles/add.ctp:18 View/Roles/edit.ctp:20
+#: View/Roles/index.ctp:42 View/Roles/view.ctp:29;63
+#: View/Situations/index.ctp:44 View/Situations/view.ctp:32
+msgid "New Situation"
+msgstr "Nova Situação"
+
+#: View/BugTrackers/edit.ctp:27 View/BugTrackers/index.ctp:63
+#: View/BugTrackers/view.ctp:62 View/Elements/side.bugs.ctp:5
+#: View/Elements/side.generic.ctp:15 View/Pages/home.ctp:14
+msgid "List Organizations"
+msgstr "Lista de Organizações"
+
+#: View/BugTrackers/edit.ctp:28 View/BugTrackers/index.ctp:64
+#: View/BugTrackers/view.ctp:63 View/Organizations/index.ctp:9
+msgid "New Organization"
+msgstr "Nova Organização"
+
+#: View/BugTrackers/index.ctp:2
+msgid "Bug Trackers"
+msgstr "Rastros"
+
+#: View/BugTrackers/index.ctp:34 View/Bugs/index.ctp:71
+#: View/LocationGroups/view.ctp:67 View/Priorities/index.ctp:16
+#: View/Priorities/view.ctp:72 View/Roles/index.ctp:16
+#: View/Roles/view.ctp:52;101 View/Situations/index.ctp:20
+#: View/Situations/view.ctp:69;124
+msgid "View"
+msgstr "Visualizar"
+
+#: View/BugTrackers/index.ctp:35 View/Bugs/index.ctp:75
+#: View/LocationGroups/view.ctp:68 View/Priorities/index.ctp:17
+#: View/Priorities/view.ctp:73 View/Roles/index.ctp:17
+#: View/Roles/view.ctp:53;102 View/Situations/index.ctp:21
+#: View/Situations/view.ctp:70;125
+msgid "Edit"
+msgstr "Editar"
+
+#: View/BugTrackers/index.ctp:44 View/Bugs/index.ctp:85
+#: View/LocationGroups/index.ctp:26 View/Organizations/index.ctp:30
+#: View/Priorities/index.ctp:26 View/Products/index.ctp:30
+#: View/Roles/index.ctp:26 View/Situations/index.ctp:30
+#: View/Users/index.ctp:44
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+"Página {:page} de {:pages}, mostrando {:current} registros de {:count}."
+
+#: View/BugTrackers/index.ctp:49 View/Bugs/index.ctp:90
+#: View/LocationGroups/index.ctp:31 View/Organizations/index.ctp:35
+#: View/Priorities/index.ctp:31 View/Products/index.ctp:35
+#: View/Roles/index.ctp:31 View/Situations/index.ctp:35
+#: View/Users/index.ctp:49
+msgid "previous"
+msgstr "anterior"
+
+#: View/BugTrackers/index.ctp:51 View/Bugs/index.ctp:92
+#: View/LocationGroups/index.ctp:33 View/Organizations/index.ctp:37
+#: View/Priorities/index.ctp:33 View/Products/index.ctp:37
+#: View/Roles/index.ctp:33 View/Situations/index.ctp:37
+#: View/Users/index.ctp:51
+msgid "next"
+msgstr "próximo"
+
+#: View/BugTrackers/index.ctp:58 View/BugTrackers/view.ctp:57
+#: View/Bugs/view.ctp:54 View/Situations/add.ctp:21
+#: View/Situations/edit.ctp:23 View/Situations/index.ctp:48
+#: View/Situations/view.ctp:36;80
+msgid "New Bug Tracker"
+msgstr "Novo Rastro"
+
+#: View/BugTrackers/view.ctp:2
+msgid "Bug Tracker"
+msgstr "Rastro"
+
+#: View/BugTrackers/view.ctp:24 View/Bugs/view_print.ctp:53
+#: View/Organizations/view.ctp:2 View/Products/view.ctp:24
+#: View/Users/view.ctp:34
+msgid "Organization"
+msgstr "Organização"
+
+#: View/BugTrackers/view.ctp:34 View/Bugs/view.ctp:33;68
+#: View/Bugs/view_print.ctp:68 View/LocationGroups/view.ctp:44
+#: View/Priorities/view.ctp:49 View/Roles/view.ctp:81
+#: View/Situations/view.ctp:52;101 View/Users/view.ctp:44
+msgid "Created By"
+msgstr "Criado por"
+
+#: View/BugTrackers/view.ctp:39 View/Bugs/view.ctp:43
+#: View/LocationGroups/view.ctp:45 View/Priorities/view.ctp:50
+#: View/Roles/view.ctp:82 View/Situations/view.ctp:53;102
+#: View/Users/view.ctp:49
+msgid "Updated"
+msgstr "Atualizado em"
+
+#: View/BugTrackers/view.ctp:44 View/LocationGroups/view.ctp:46
+#: View/Priorities/view.ctp:51 View/Roles/view.ctp:83
+#: View/Situations/view.ctp:54;103
+msgid "Updated By"
+msgstr "Atualizado por"
+
+#: View/BugTrackers/view.ctp:55
+msgid "Delete Bug Tracker"
+msgstr "Deletar Rastro"
+
+#: View/Bugs/add.ctp:4
+msgid "Add Bug"
+msgstr "Adicionar Demanda"
+
+#: View/Bugs/add.ctp:11;14 View/Bugs/edit.ctp:8;11
+#: View/Organizations/add.ctp:8 View/Organizations/edit.ctp:9
+#: View/Products/add.ctp:9 View/Users/add.ctp:15;16 View/Users/edit.ctp:27;28
+msgid "Select an Item..."
+msgstr "Selecione um Item..."
+
+#: View/Bugs/edit.ctp:4 View/Bugs/view.ctp:55
+msgid "Edit Bug"
+msgstr "Editar Demanda"
+
+#: View/Bugs/edit.ctp:14
+msgid "NO"
+msgstr "NÃO"
+
+#: View/Bugs/edit.ctp:14
+msgid "YES"
+msgstr "SIM"
+
+#: View/Bugs/index.ctp:3 View/Users/signin.ctp:8
+msgid "Bugs"
+msgstr "Demandas"
+
+#: View/Bugs/index.ctp:12
+msgid "id"
+msgstr "id"
+
+#: View/Bugs/index.ctp:72
+msgid "Move"
+msgstr "Rastro"
+
+#: View/Bugs/view.ctp:53
+msgid "Print Bug"
+msgstr "Imprimir Demanda"
+
+#: View/Bugs/view.ctp:60 View/Situations/view.ctp:42
+msgid "Related Bug Trackers"
+msgstr "Rastros relacionados"
+
+#: View/Bugs/view.ctp:67
+msgid "Technicians"
+msgstr "Técnicos"
+
+#: View/Bugs/view_print.ctp:23
+msgid "Number"
+msgstr "Número"
+
+#: View/Bugs/view_print.ctp:28 View/LocationGroups/view.ctp:33
+#: View/Priorities/view.ctp:38 View/Situations/view.ctp:90
+msgid "Reporter"
+msgstr ""
+
+#: View/Bugs/view_print.ctp:48 View/Priorities/view.ctp:2
+msgid "Priority"
+msgstr ""
+
+#: View/Bugs/view_print.ctp:58 View/LocationGroups/view.ctp:41
+#: View/Priorities/view.ctp:46 View/Situations/view.ctp:98
+msgid "Location"
+msgstr ""
+
+#: View/Elements/filter.date.ctp:9 View/Elements/filter.select.ctp:9
+msgid "Apply"
+msgstr "Aplicar"
+
+#: View/Elements/filter.date.ctp:12 View/Elements/filter.select.ctp:12
+msgid "Clear"
+msgstr "Limpar"
+
+#: View/Elements/filter.date.ctp:17
+msgid "Begin"
+msgstr "Início"
+
+#: View/Elements/filter.date.ctp:19
+msgid "End"
+msgstr "Fim"
+
+#: View/Elements/form.search.ctp:3
+msgid "Search"
+msgstr "Localizar"
+
+#: View/Elements/side.bugs.ctp:4 View/Elements/side.generic.ctp:14
+msgid "List Products"
+msgstr "Lista de Produtos"
+
+#: View/Elements/side.bugs.ctp:9 View/Elements/side.generic.ctp:20
+#: View/Pages/home.ctp:18 View/Roles/add.ctp:19 View/Roles/edit.ctp:21
+#: View/Roles/index.ctp:43 View/Roles/view.ctp:30
+msgid "List Users"
+msgstr "Lista de Usuários"
+
+#: View/Elements/side.generic.ctp:19 View/Pages/home.ctp:20
+#: View/Priorities/add.ctp:16 View/Priorities/edit.ctp:18
+#: View/Priorities/view.ctp:26
+msgid "List Priorities"
+msgstr ""
+
+#: View/LocationGroups/add.ctp:4
+msgid "Add Location Group"
+msgstr ""
+
+#: View/LocationGroups/edit.ctp:4 View/LocationGroups/view.ctp:19
+msgid "Edit Location Group"
+msgstr ""
+
+#: View/LocationGroups/index.ctp:2
+msgid "Location Groups"
+msgstr ""
+
+#: View/LocationGroups/index.ctp:8 View/LocationGroups/view.ctp:22
+msgid "New Location Group"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:2
+msgid "Location Group"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:9 View/Organizations/view.ctp:9
+#: View/Priorities/view.ctp:9 View/Products/view.ctp:9
+#: View/Roles/view.ctp:9;40;73 View/Situations/view.ctp:9
+#: View/Users/view.ctp:9
+msgid "Name"
+msgstr "Nome"
+
+#: View/LocationGroups/view.ctp:20
+msgid "Delete Location Group"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:21 View/Pages/home.ctp:15
+msgid "List Location Groups"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:28 View/Priorities/view.ctp:33
+#: View/Situations/view.ctp:85
+msgid "Related Bugs"
+msgstr "Demandas Relacionadas"
+
+#: View/LocationGroups/view.ctp:34 View/Priorities/view.ctp:39
+#: View/Situations/view.ctp:91
+msgid "Reporter Social"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:36 View/Priorities/view.ctp:41
+#: View/Situations/view.ctp:93
+msgid "Product Id"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:37 View/Priorities/view.ctp:42
+#: View/Situations/view.ctp:48;94
+msgid "Situation Id"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:38 View/Priorities/view.ctp:43
+#: View/Situations/view.ctp:95
+msgid "Priority Id"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:39 View/Priorities/view.ctp:44
+#: View/Situations/view.ctp:96
+msgid "Location Geo"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:40 View/Priorities/view.ctp:45
+#: View/Situations/view.ctp:97
+msgid "Location Group Id"
+msgstr ""
+
+#: View/LocationGroups/view.ctp:42 View/Priorities/view.ctp:47
+#: View/Situations/view.ctp:99
+msgid "Points"
+msgstr ""
+
+#: View/Organizations/add.ctp:4
+msgid "Add Organization"
+msgstr "Adicionar Organização"
+
+#: View/Organizations/edit.ctp:4
+msgid "Edit Organization"
+msgstr "Editar Organização"
+
+#: View/Organizations/index.ctp:2
+msgid "Organizations"
+msgstr "Organizações"
+
+#: View/Organizations/view.ctp:14
+msgid "Responsible"
+msgstr "Responsável"
+
+#: View/Organizations/view.ctp:19
+msgid "Parent Organization"
+msgstr "Superior"
+
+#: View/Organizations/view.ctp:24
+msgid "Parent Array"
+msgstr ""
+
+#: View/Organizations/view.ctp:29
+msgid "Acronym"
+msgstr "Sigla"
+
+#: View/Pages/home.ctp:17 View/Roles/add.ctp:20 View/Roles/edit.ctp:22
+#: View/Roles/index.ctp:44 View/Roles/view.ctp:31;112 View/Users/index.ctp:19
+msgid "New User"
+msgstr "Novo Usuário"
+
+#: View/Priorities/add.ctp:4
+msgid "Add Priority"
+msgstr ""
+
+#: View/Priorities/edit.ctp:4 View/Priorities/view.ctp:24
+msgid "Edit Priority"
+msgstr ""
+
+#: View/Priorities/index.ctp:2
+msgid "Priorities"
+msgstr ""
+
+#: View/Priorities/index.ctp:40 View/Priorities/view.ctp:27
+msgid "New Priority"
+msgstr ""
+
+#: View/Priorities/view.ctp:14 View/Roles/view.ctp:14;42
+#: View/Situations/view.ctp:19
+msgid "Sort"
+msgstr "Ordem"
+
+#: View/Priorities/view.ctp:25
+msgid "Delete Priority"
+msgstr ""
+
+#: View/Products/add.ctp:4
+msgid "Add Product"
+msgstr "Adicionar Produto"
+
+#: View/Products/edit.ctp:4
+msgid "Edit Product"
+msgstr "Editar Produto"
+
+#: View/Products/index.ctp:2
+msgid "Products"
+msgstr "Produtos"
+
+#: View/Products/index.ctp:9
+msgid "New Product"
+msgstr "Novo Produto"
+
+#: View/Products/view.ctp:14
+msgid "Description"
+msgstr "Descrição"
+
+#: View/Products/view.ctp:19
+msgid "Keywords"
+msgstr ""
+
+#: View/Roles/add.ctp:4
+msgid "Add Role"
+msgstr ""
+
+#: View/Roles/add.ctp:16 View/Roles/edit.ctp:18 View/Roles/view.ctp:26
+#: View/Situations/add.ctp:18 View/Situations/edit.ctp:20
+#: View/Situations/index.ctp:45 View/Situations/view.ctp:33
+msgid "List Roles"
+msgstr ""
+
+#: View/Roles/edit.ctp:4 View/Roles/view.ctp:24
+msgid "Edit Role"
+msgstr ""
+
+#: View/Roles/index.ctp:2
+msgid "Roles"
+msgstr ""
+
+#: View/Roles/index.ctp:40 View/Roles/view.ctp:27 View/Situations/add.ctp:19
+#: View/Situations/edit.ctp:21 View/Situations/index.ctp:46
+#: View/Situations/view.ctp:34
+msgid "New Role"
+msgstr ""
+
+#: View/Roles/view.ctp:2 View/Situations/view.ctp:14 View/Users/view.ctp:29
+msgid "Role"
+msgstr ""
+
+#: View/Roles/view.ctp:25
+msgid "Delete Role"
+msgstr ""
+
+#: View/Roles/view.ctp:35
+msgid "Related Situations"
+msgstr ""
+
+#: View/Roles/view.ctp:41;78
+msgid "Role Id"
+msgstr ""
+
+#: View/Roles/view.ctp:68
+msgid "Related Users"
+msgstr ""
+
+#: View/Roles/view.ctp:74 View/Users/view.ctp:14
+msgid "Email"
+msgstr ""
+
+#: View/Roles/view.ctp:75 View/Users/signin.ctp:16 View/Users/view.ctp:19
+msgid "Username"
+msgstr "Usuário"
+
+#: View/Roles/view.ctp:76 View/Users/signin.ctp:17
+msgid "Password"
+msgstr "Senha"
+
+#: View/Roles/view.ctp:79 View/Situations/view.ctp:50
+msgid "Organization Id"
+msgstr ""
+
+#: View/Situations/add.ctp:4
+msgid "Add Situation"
+msgstr ""
+
+#: View/Situations/edit.ctp:4 View/Situations/view.ctp:29
+msgid "Edit Situation"
+msgstr ""
+
+#: View/Situations/index.ctp:2
+msgid "Situations"
+msgstr ""
+
+#: View/Situations/view.ctp:30
+msgid "Delete Situation"
+msgstr ""
+
+#: View/Situations/view.ctp:47
+msgid "Bug Id"
+msgstr ""
+
+#: View/Users/add.ctp:4
+msgid "Add User"
+msgstr ""
+
+#: View/Users/edit.ctp:12
+msgid "Edit User"
+msgstr ""
+
+#: View/Users/edit.ctp:23
+msgid "edit password"
+msgstr ""
+
+#: View/Users/edit.ctp:24
+msgid "close password"
+msgstr ""
+
+#: View/Users/index.ctp:10
+msgid "Users"
+msgstr "Usuários"
+
+#: View/Users/signin.ctp:18
+msgid "Enter"
+msgstr "Entrar"
+
+#: View/Users/view.ctp:2
+msgid "User"
+msgstr "Usuário"
+
+#: Model/Bug.php:validation for field requestor;validation deadline;validation
+#: details Model/LocationGroup.php:validation name
+#: Model/Organization.php:validation name;validation responsible;validation
+#: parent_id Model/Priority.php:validation Model/Product.php:validation
+#: description;validation keywords Model/Role.php:validation
+#: Model/Situation.php:validation Model/User.php:validation
+#: username;validation password;validation confirm_password;validation phone
+msgid "notEmpty"
+msgstr ""
+
+#: Model/Bug.php:validation for field product_id;validation origin_id
+#: Model/BugTracker.php:validation bug_id;validation situation_id;validation
+#: organization_id;validation created_by;validation updated_by
+#: Model/Priority.php:validation sort Model/Product.php:validation
+#: organization_id Model/Role.php:validation Model/Situation.php:validation
+#: role_id;validation Model/User.php:validation
+msgid "numeric"
+msgstr ""
+
+#: Model/User.php:validation for field email
+msgid "email"
+msgstr ""
+
+#: Model/User.php:validation for field username
+msgid "This username has already been taken."
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:41
+msgid "-> Testing :url"
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:67
+msgid "Total Requests made: :requests"
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:68
+msgid "Total Time elapsed: :duration (seconds)"
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:72
+msgid "Requests/Second: :rps req/sec"
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:76
+msgid "Average request time: :average-time seconds"
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:80
+msgid "Standard deviation of average request time: :std-dev"
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:84
+msgid "Longest/shortest request: :longest sec/:shortest sec"
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:134
+msgid ""
+"Allows you to obtain some rough benchmarking statisticsabout a fully "
+"qualified URL."
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:139
+msgid "The URL to request."
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:144
+msgid "Number of iterations to perform."
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:148
+msgid ""
+"Maximum total time for all iterations, in seconds.If a single iteration "
+"takes more than the timeout, only one request will be made"
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/BenchmarkShell.php:152
+msgid ""
+"Example Use: `cake benchmark --n 10 --t 100 http://localhost/testsite`. "
+"<info>Note:</info> this benchmark does not include browser render times."
+msgstr ""
+
+#: Plugin/debug_kit/Controller/Component/ToolbarComponent.php:159
+msgid "Component initialization"
+msgstr ""
+
+#: Plugin/debug_kit/Controller/Component/ToolbarComponent.php:281
+msgid "Controller action"
+msgstr ""
+
+#: Plugin/debug_kit/Controller/Component/ToolbarComponent.php:284
+msgid "Controller action start"
+msgstr ""
+
+#: Plugin/debug_kit/Controller/Component/ToolbarComponent.php:304
+msgid "Processing toolbar state"
+msgstr ""
+
+#: Plugin/debug_kit/Controller/Component/ToolbarComponent.php:327
+msgid "Processing toolbar data"
+msgstr ""
+
+#: Plugin/debug_kit/Controller/Component/ToolbarComponent.php:362
+msgid "Controller render start"
+msgstr ""
+
+#: Plugin/debug_kit/Controller/Component/ToolbarComponent.php:446
+msgid "Could not load DebugToolbar panel %s"
+msgstr ""
+
+#: Plugin/debug_kit/Lib/DebugTimer.php:128
+msgid "Core Processing (Derived from $_SERVER[\"REQUEST_TIME\"])"
+msgstr ""
+
+#: Plugin/debug_kit/Lib/FireCake.php:310
+msgid "Headers already sent in %s on line %s. Cannot send log data to FirePHP."
+msgstr ""
+
+#: Plugin/debug_kit/Lib/FireCake.php:331
+msgid "Incorrect parameter count for FireCake::fb()"
+msgstr ""
+
+#: Plugin/debug_kit/Lib/FireCake.php:410
+msgid "Maximum number (99,999) of messages reached!"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/debug_toolbar.ctp:23
+msgid "There are no active panels. You must enable a panel to see its output."
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/environment_panel.ctp:20
+msgid "App Constants"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/environment_panel.ctp:36
+msgid "CakePHP Constants"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/environment_panel.ctp:52
+msgid "PHP Environment"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/environment_panel.ctp:70
+msgid "Hidef Environment"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/history_panel.ctp:19
+msgid "Request History"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/history_panel.ctp:21
+msgid "No previous requests logged."
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/history_panel.ctp:23
+msgid "previous requests available"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/history_panel.ctp:25
+msgid "Restore to current request"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/include_panel.ctp:19
+msgid "Included Files"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/log_panel.ctp:19
+msgid "Logs"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/log_panel.ctp:27
+msgid "Time"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/log_panel.ctp:27
+#: Plugin/debug_kit/View/Elements/timer_panel.ctp:42;66
+msgid "Message"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/log_panel.ctp:38
+msgid "There were no log entries made this request"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/request_panel.ctp:19
+msgid "Request"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/request_panel.ctp:27
+msgid "No post data."
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/request_panel.ctp:36
+msgid "No querystring data."
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/request_panel.ctp:49
+msgid "Current Route"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/session_panel.ctp:19
+msgid "Session"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/sql_log_panel.ctp:24
+msgid "Sql Logs"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/sql_log_panel.ctp:39
+msgid "No query logs when debug < 2."
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/sql_log_panel.ctp:41
+msgid "No query logs."
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/sql_log_panel.ctp:45
+msgid "Total Time: %s ms <br />Total Queries: %s queries"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/sql_log_panel.ctp:54
+msgid "Query Explain:"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/sql_log_panel.ctp:57
+msgid "Click an \"Explain\" link above, to see the query explanation."
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/sql_log_panel.ctp:63
+msgid "No active database connections"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/timer_panel.ctp:35
+msgid "Memory"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/timer_panel.ctp:38
+msgid "Peak Memory Use"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/timer_panel.ctp:42
+msgid "Memory use"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/timer_panel.ctp:55
+msgid "Timers"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/timer_panel.ctp:57
+msgid "%s (ms)"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/timer_panel.ctp:58
+msgid "Total Request Time:"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/timer_panel.ctp:67
+msgid "Time in ms"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/timer_panel.ctp:68
+msgid "Graph"
+msgstr ""
+
+#: Plugin/debug_kit/View/Elements/variables_panel.ctp:19
+msgid "View Variables"
+msgstr ""
+
+#: Plugin/debug_kit/View/Helper/DebugTimerHelper.php:45
+msgid "Rendering View"
+msgstr ""
+
+#: Plugin/debug_kit/View/Helper/DebugTimerHelper.php:60
+msgid "Rendering %s"
+msgstr ""
+
+#: Plugin/debug_kit/View/Helper/DebugTimerHelper.php:86
+msgid "View render complete"
+msgstr ""
+
+#: Plugin/debug_kit/View/Helper/HtmlToolbarHelper.php:226
+msgid "Explain"
+msgstr ""
+
+#: Plugin/debug_kit/View/Helper/SimpleGraphHelper.php:80
+msgid "Starting %sms into the request, taking %sms"
+msgstr ""
+
+#: Plugin/debug_kit/View/Helper/TidyHelper.php:99
+msgid "No markup errors found"
+msgstr ""
+
+#: Plugin/debug_kit/View/Helper/ToolbarHelper.php:189
+msgid "maybe slow"
+msgstr ""
+
+#: Plugin/debug_kit/Console/Command/WhitespaceShell.php:90
+msgid "Absolute path or relative to APP."
+msgstr ""
+
+#: View/Errors/error400.ctp:21 View/Errors/error500.ctp:21
+msgid "Error"
+msgstr ""
+
+#: View/Errors/error400.ctp:23
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: View/Errors/error500.ctp:22
+msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: View/Layouts/default.ctp:2
+msgid "BugTracker"
+msgstr ""
+
+#: View/Layouts/error.ctp:19
+msgid "CakePHP: the rapid development php framework"
+msgstr ""
+
+#: View/Layouts/printable.ctp:2
+msgid "Tracker"
+msgstr ""
+
+#: View/Layouts/signin.ctp:2
+msgid "Sign in"
+msgstr ""
+
+#: View/Pages/check.ctp:16
+msgid "Release Notes for CakePHP %s."
+msgstr ""
+
+#: View/Pages/check.ctp:18
+msgid "Read the changelog"
+msgstr ""
+
+#: View/Pages/check.ctp:29
+msgid "URL rewriting is not properly configured on your server."
+msgstr ""
+
+#: View/Pages/check.ctp:40
+msgid "Your version of PHP is 5.2.8 or higher."
+msgstr ""
+
+#: View/Pages/check.ctp:44
+msgid ""
+"Your version of PHP is too low. You need PHP 5.2.8 or higher to use CakePHP."
+msgstr ""
+
+#: View/Pages/check.ctp:53
+msgid "Your tmp directory is writable."
+msgstr ""
+
+#: View/Pages/check.ctp:57
+msgid "Your tmp directory is NOT writable."
+msgstr ""
+
+#: View/Pages/check.ctp:67
+msgid "The %s is being used for core caching. To change the config edit %s"
+msgstr ""
+
+#: View/Pages/check.ctp:71
+msgid "Your cache is NOT working. Please check the settings in %s"
+msgstr ""
+
+#: View/Pages/check.ctp:81
+msgid "Your database configuration file is present."
+msgstr ""
+
+#: View/Pages/check.ctp:86
+msgid "Your database configuration file is NOT present."
+msgstr ""
+
+#: View/Pages/check.ctp:88
+msgid "Rename %s to %s"
+msgstr ""
+
+#: View/Pages/check.ctp:113
+msgid "CakePHP is able to connect to the database."
+msgstr ""
+
+#: View/Pages/check.ctp:117
+msgid "CakePHP is NOT able to connect to the database."
+msgstr ""
+
+#: View/Pages/check.ctp:129
+msgid "PCRE has not been compiled with Unicode support."
+msgstr ""
+
+#: View/Pages/check.ctp:131
+msgid ""
+"Recompile PCRE with Unicode support by adding <code>--enable-unicode-"
+"properties</code> when configuring"
+msgstr ""
+
+#: View/Pages/check.ctp:140
+msgid "DebugKit plugin is present"
+msgstr ""
+
+#: View/Pages/check.ctp:144
+msgid ""
+"DebugKit is not installed. It will help you inspect and debug different "
+"aspects of your application."
+msgstr ""
+
+#: View/Pages/check.ctp:146
+msgid "You can install it from %s"
+msgstr ""
+
+#: View/Pages/check.ctp:152
+msgid "Editing this Page"
+msgstr ""
+
+#: View/Pages/check.ctp:155
+msgid ""
+"To change the content of this page, edit: %s.<br />\n"
+"To change its layout, edit: %s.<br />\n"
+"You can also add some CSS styles for your pages at: %s."
+msgstr ""
+
+#: View/Pages/check.ctp:162
+msgid "Getting Started"
+msgstr ""
+
+#: View/Pages/check.ctp:166
+msgid "New"
+msgstr ""
+
+#: View/Pages/check.ctp:166
+msgid "CakePHP 2.0 Docs"
+msgstr ""
+
+#: View/Pages/check.ctp:175
+msgid "The 15 min Blog Tutorial"
+msgstr ""
+
+#: View/Pages/check.ctp:182
+msgid "Official Plugins"
+msgstr ""
+
+#: View/Pages/check.ctp:187
+msgid ""
+"provides a debugging toolbar and enhanced debugging tools for CakePHP "
+"applications."
+msgstr ""
+
+#: View/Pages/check.ctp:191
+msgid ""
+"contains various localized validation classes and translations for specific "
+"countries"
+msgstr ""
+
+#: View/Pages/check.ctp:196
+msgid "More about CakePHP"
+msgstr ""
+
+#: View/Pages/check.ctp:198
+msgid ""
+"CakePHP is a rapid development framework for PHP which uses commonly known "
+"design patterns like Active Record, Association Data Mapping, Front "
+"Controller and MVC."
+msgstr ""
+
+#: View/Pages/check.ctp:201
+msgid ""
+"Our primary goal is to provide a structured framework that enables PHP users "
+"at all levels to rapidly develop robust web applications, without any loss "
+"to flexibility."
+msgstr ""
+
+#: View/Pages/check.ctp:206
+msgid "The Rapid Development Framework"
+msgstr ""
+
+#: View/Pages/check.ctp:207
+msgid "CakePHP Documentation"
+msgstr ""
+
+#: View/Pages/check.ctp:208
+msgid "Your Rapid Development Cookbook"
+msgstr ""
+
+#: View/Pages/check.ctp:209
+msgid "CakePHP API"
+msgstr ""
+
+#: View/Pages/check.ctp:210
+msgid "Quick API Reference"
+msgstr ""
+
+#: View/Pages/check.ctp:211
+msgid "The Bakery"
+msgstr ""
+
+#: View/Pages/check.ctp:212
+msgid "Everything CakePHP"
+msgstr ""
+
+#: View/Pages/check.ctp:213
+msgid "CakePHP Plugins"
+msgstr ""
+
+#: View/Pages/check.ctp:214
+msgid "A comprehensive list of all CakePHP plugins created by the community"
+msgstr ""
+
+#: View/Pages/check.ctp:215
+msgid "CakePHP Community Center"
+msgstr ""
+
+#: View/Pages/check.ctp:216
+msgid "Everything related to the CakePHP community in one place"
+msgstr ""
+
+#: View/Pages/check.ctp:217
+msgid "CakePHP Google Group"
+msgstr ""
+
+#: View/Pages/check.ctp:218
+msgid "Community mailing list"
+msgstr ""
+
+#: View/Pages/check.ctp:220
+msgid "Live chat about CakePHP"
+msgstr ""
+
+#: View/Pages/check.ctp:221
+msgid "CakePHP Code"
+msgstr ""
+
+#: View/Pages/check.ctp:222
+msgid "Find the CakePHP code on GitHub and contribute to the framework"
+msgstr ""
+
+#: View/Pages/check.ctp:223;224
+msgid "CakePHP Issues"
+msgstr ""
+
+#: View/Pages/check.ctp:225;226
+msgid "CakePHP Roadmaps"
+msgstr ""
+
+#: View/Pages/check.ctp:227
+msgid "Training"
+msgstr ""
+
+#: View/Pages/check.ctp:228
+msgid "Join a live session and get skilled with the framework"
+msgstr ""
+
+#: View/Pages/check.ctp:229
+msgid "CakeFest"
+msgstr ""
+
+#: View/Pages/check.ctp:230
+msgid "Don't miss our annual CakePHP conference"
+msgstr ""
+
+#: View/Pages/check.ctp:231
+msgid "Cake Software Foundation"
+msgstr ""
+
+#: View/Pages/check.ctp:232
+msgid "Promoting development related to CakePHP"
+msgstr ""
+
+#: webroot/test.php:93
+msgid "Debug setting does not allow access to this url."
+msgstr ""
