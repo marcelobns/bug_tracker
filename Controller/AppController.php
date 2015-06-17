@@ -4,14 +4,25 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
     public $components = array(
         'Auth' => array(
-            'loginAction' => array('controller' => 'users', 'action' => 'signin'),
+            'loginAction' => array('controller' => 'users', 'action' => 'login'),
             'loginRedirect' => array('controller' => 'bugs', 'action' => 'index'),
             'logoutRedirect' => array('controller' => 'bugs', 'action' => 'index'),
-//            'authorize' => array('Controller')
+            'authorize' => array('Controller'),
         ),
-        'Session',
-//        'DebugKit.Toolbar'
+        'AccessKit.Control',
+        'Session'
     );
+
+    public $helpers = array(
+        'AccessKit.AuthView'
+    );
+
+    public function isAuthorized($user) {
+        return $this->Control->authorize(
+        $user['Rule'],
+        $this->name,
+        $this->action);
+    }
 
     public function beforeFilter() {
         if ($this->Session->check('Config.language')) {
@@ -60,12 +71,12 @@ class AppController extends Controller {
 
     public function arrayToDB($array) {
         if($array === NULL || $array === '')
-            return NULL;
+        return NULL;
         $arrayDB = '{';
-        foreach($array as $item){
-            $arrayDB = $arrayDB.$item.',';
+            foreach($array as $item){
+                $arrayDB = $arrayDB.$item.',';
+            }
+            $arrayDB[strlen($arrayDB)-1] = '}';
+            return $arrayDB;
         }
-        $arrayDB[strlen($arrayDB)-1] = '}';
-        return $arrayDB;
     }
-}

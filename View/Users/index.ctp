@@ -28,6 +28,9 @@
                     <?php echo $this->Html->link('<i class="fa fa-file-text-o fa-lg"></i>', array('action' => 'view', $user['User']['id']), array('escape'=>false)); ?>
                     <?php echo $this->Html->link('<i class="fa fa-pencil fa-lg"></i>', array('action' => 'edit', $user['User']['id']), array('escape'=>false)); ?>
                     <?php echo $this->Html->link('<i class="fa fa-minus-square-o fa-lg"></i>', array('action' => 'reset', $user['User']['id']), array('escape'=>false)); ?>
+                    <?php echo $this->Form->postLink('<i class="fa fa-eraser fa-lg"></i>',
+									array('action' => 'reset_pass', $user['User']['id']),
+									array('title'=>__('Reset Pass'), 'escape'=>false), __('Are you sure you want to Reset Password # %s?', $user['User']['id'])); ?>
                 </td>
             </tr>
         <?php endforeach; ?>

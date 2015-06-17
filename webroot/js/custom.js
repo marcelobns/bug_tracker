@@ -1,12 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-    $('.combobox').combobox();
-
-    $('th.actions a').prepend('<i class="fa fa-file-o fa-lg"></i>&nbsp;');
+    $('th.actions a').prepend('<i class="fa fa-plus-circle fa-lg"></i>&nbsp;');
     $('td.actions a[href*="view"]').html('<i class="fa fa-file-text-o fa-lg"></i>');
     $('td.actions a[href*="edit"]').html('<i class="fa fa-pencil fa-lg"></i>');
     $('form[action*="delete"] + a').html('<i class="fa fa-trash-o fa-lg"></i>');
-    $('.required .custom-combobox input').attr('required', 'true');
     $('.index table').addClass('table table-condensed table-hover');
 
     $('div.input:not(.checkbox)').addClass('form-group');
@@ -15,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         $(o).prependTo($('label[for='+o.id+']'));
     });
 
-    $('.paging .prev a, .paging .prev.disabled').text('« ');
-    $('.paging .next a, .paging .next.disabled').text(' »');
+    $('.paging .prev a, .paging .prev.disabled').text('«');
+    $('.paging .next a, .paging .next.disabled').text('»');
 
     $('.text-uppercase').blur(function(e){
         $('#'+e.currentTarget.id).val(($('#'+e.currentTarget.id).val()).toUpperCase());
@@ -26,9 +22,26 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.refresh').addClass('fa-spin');
     });
 
+    $('.selectize').selectize({
+        selectOnTab: true
+    });
+
     FormFilter.set();
     Bootstrap.set();
     Normalize.set();
+
+    $( "#from" ).datepicker($.extend(locale_date, {
+      numberOfMonths: 2,
+      onClose: function( selectedDate ) {
+        $( "#to" ).datepicker( "option", "minDate", selectedDate );
+      }
+    }));
+    $( "#to" ).datepicker($.extend(locale_date, {
+      numberOfMonths: 2,
+      onClose: function( selectedDate ) {
+        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    }));
 }, false);
 
 var Normalize = {
@@ -43,16 +56,7 @@ var Normalize = {
         },function(){
             $('.message').css('opacity', 0.6);
         });
-        $('.date_picker').datepicker({
-            dateFormat: 'dd/mm/yy',
-            dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
-            dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
-            dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
-            monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-            monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
-            nextText: 'Próximo',
-            prevText: 'Anterior'
-        });
+        $('.date_picker').datepicker(locale_date);
         return true;
     },
     date:function(){
@@ -140,4 +144,15 @@ var Assets = {
         }
         return args;
     }
+};
+
+var locale_date = {
+    dateFormat: 'dd/mm/yy',
+    dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+    dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+    monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+    nextText: 'Próximo',
+    prevText: 'Anterior'
 };

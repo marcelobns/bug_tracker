@@ -8,30 +8,20 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
-/**
- * Components
- *
- * @var array
- */
 	public $components = array('Paginator');
 
-/**
- * index method
- *
- * @return void
- */
 	public function index() {
         $conditions = array(
             $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)'
         );
         if(@$_GET['q']){
-            $_GET['q'] = is_numeric($_GET['q']) ? $_GET['q'] : '%'.$_GET['q'].'%';
+            $q = is_numeric($_GET['q']) ? $_GET['q'] : '%'.$_GET['q'].'%';
             $conditions = array(
                 $this->Session->read('Auth.User.organization_id').' = ANY(Organization.parent_array)',
                 'OR'=>array(
-                    'User.id::text ilike \''.$_GET['q'].'\'',
-                    'User.name::text ilike \''.$_GET['q'].'\'',
-                    'User.username::text ilike \''.$_GET['q'].'\'',
+                    'User.id::text ilike \''.$q.'\'',
+                    'User.name::text ilike \''.$q.'\'',
+                    'User.username::text ilike \''.$q.'\'',
                 )
             );
         }
@@ -49,13 +39,6 @@ class UsersController extends AppController {
 		$this->set('users', $this->Paginator->paginate());
 	}
 
-/**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function view($id = null) {
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid user'));
@@ -64,11 +47,6 @@ class UsersController extends AppController {
 		$this->set('user', $this->User->find('first', $options));
 	}
 
-/**
- * add method
- *
- * @return void
- */
 	public function add() {
 		if ($this->request->is('post')) {
             $this->request->data['User']['password'] = Security::hash($this->data['User']['password'], 'md5', false);
@@ -91,13 +69,6 @@ class UsersController extends AppController {
 		$this->set(compact('roles', 'organizations'));
 	}
 
-/**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function edit($id = null) {
         $isUser = $this->Session->read('Auth.User.id') == $id ? true : false;
 
@@ -149,13 +120,6 @@ class UsersController extends AppController {
 		$this->set(compact('roles', 'organizations', 'isUser', 'role_sort'));
 	}
 
-/**
- * delete method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function delete($id = null) {
 		$this->User->id = $id;
 		if (!$this->User->exists()) {
@@ -170,14 +134,10 @@ class UsersController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 
-    public function signin(){
+    public function login(){
         if ($this->request->is('post')) {
             $user = $this->User->find('first', array(
-                    'fields' => array(
-                        'User.*',
-                        'Role.*',
-                        'Organization.*'
-                    ),
+					'recursive'=> 1,
                     'conditions' => array(
                         'User.username' => $this->data['User']['username'],
                         'User.password' => Security::hash($this->data['User']['password'], 'md5', false)
@@ -191,21 +151,42 @@ class UsersController extends AppController {
                     'last_signin' => date('Y-m-d H:i:s'),
                     'updated_by' => $user['User']['id']
                 );
+
+                $user['User']['Role'] = $user['Role'];
+                $user['User']['Organization'] = $user['Organization'];
+                $this->Auth->login($user['User']);
+
                 if($this->User->save($signin)){
-                    $user['User']['Role'] = $user['Role'];
-                    $user['User']['Organization'] = $user['Organization'];
-                    $this->Auth->login($user['User']);
                     $this->redirect($this->Auth->redirectUrl());
                 }
             }else{
                 $this->Session->setFlash(__('Invalid! username or password.'), 'default', array('class'=>'alert-danger'));
             }
         }
-        $this->layout = 'signin';
+        $this->layout = 'login';
     }
 
     public function logout(){
         $this->Session->destroy();
         $this->redirect($this->Auth->logout());
     }
+
+	public function reset_pass($id = null) {
+		$this->User->id = $id;
+		if (!$this->User->exists()) {
+			throw new NotFoundException(__('Invalid user'));
+		}
+		$this->request->onlyAllow('post', 'delete');
+		$user = array('User'=>array(
+			'id'=>$id,
+			'password'=>Security::hash('123', 'md5', false)
+			));
+
+		if ($this->User->save($user)) {
+			$this->Session->setFlash(__('The password has been reseted.'));
+		} else {
+			$this->Session->setFlash(__('The password could not be reseted. Please, try again.'));
+		}
+		return $this->redirect(array('action' => 'index'));
+	}
 }

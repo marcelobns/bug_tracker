@@ -8,30 +8,13 @@ App::uses('AppController', 'Controller');
  */
 class RolesController extends AppController {
 
-/**
- * Components
- *
- * @var array
- */
 	public $components = array('Paginator');
 
-/**
- * index method
- *
- * @return void
- */
 	public function index() {
 		$this->Role->recursive = 0;
 		$this->set('roles', $this->Paginator->paginate());
 	}
 
-/**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function view($id = null) {
 		if (!$this->Role->exists($id)) {
 			throw new NotFoundException(__('Invalid role'));
@@ -40,11 +23,6 @@ class RolesController extends AppController {
 		$this->set('role', $this->Role->find('first', $options));
 	}
 
-/**
- * add method
- *
- * @return void
- */
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Role->create();
@@ -57,19 +35,12 @@ class RolesController extends AppController {
 		}
 	}
 
-/**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function edit($id = null) {
 		if (!$this->Role->exists($id)) {
 			throw new NotFoundException(__('Invalid role'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Role->save($this->request->data)) {
+			if ($this->Role->saveAll($this->request->data)) {
 				$this->Session->setFlash(__('The role has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -77,17 +48,11 @@ class RolesController extends AppController {
 			}
 		} else {
 			$options = array('conditions' => array('Role.' . $this->Role->primaryKey => $id));
-			$this->request->data = $this->Role->find('first', $options);
+			$this->request->data = $this->Role->find('first', $options);			
+			$this->request->data['Rule'] = $this->Control->rules($this->request->data['Rule']);
 		}
 	}
 
-/**
- * delete method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function delete($id = null) {
 		$this->Role->id = $id;
 		if (!$this->Role->exists()) {
@@ -100,4 +65,5 @@ class RolesController extends AppController {
 			$this->Session->setFlash(__('The role could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
+	}
+}

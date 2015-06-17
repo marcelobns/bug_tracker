@@ -11,16 +11,75 @@ th .filter > .btn{
     margin: 0px;
     padding: 0px;
 }
-
 footer{
     position: fixed;
     bottom: 0px;
     width: 100%;
 }
+.no-display {
+    display:none;
+}
+@media print {
+    .no-print {
+        display: none;
+    }
+    .print {
+        display: inline-block;
+    }
+}
 
-.ui-autocomplete-category {
-    font-weight: bold;
-    padding: .2em .4em;
-    margin: .8em 0 .2em;
-    line-height: 1.5;
+@media only screen and (max-width: 800px) {
+    /* Force table to not be like tables anymore */
+    .no-table table,
+    .no-table thead,
+    .no-table tbody,
+    .no-table th,
+    .no-table td,
+    .no-table tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .no-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .no-table tr { border: 1px solid #ccc; }
+
+    .no-table td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align:left;
+    }
+
+    .no-table td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align:left;
+        font-weight: bold;
+    }
+
+    .no-table legend {
+        text-align: center;
+        border: none;
+    }
+    .no-table .pull-right {
+        float: none!important;
+    }
+
+    .no-table tr{
+        margin-bottom: 20px;
+    }
 }

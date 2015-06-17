@@ -57,7 +57,17 @@
     </dd>
     <dt><?php echo __('Created By'); ?></dt>
     <dd>
-        <?php echo h($bug['Creator']['name']); ?>
+        <?php echo h($bug['Creator']['name']);?>
+        &nbsp;
+    </dd>
+    <dt>Situação</dt>
+    <dd>
+        <?php echo h($bug['Situation']['name']).' '.h($bug['BugTrack']['details']);?>
+        &nbsp;
+    </dd>
+    <dt>Técnicos</dt>
+    <dd>
+        <?php echo str_replace(array('{','}'), '', h($bug['Technician']['array']));?>
         &nbsp;
     </dd>
 </dl>

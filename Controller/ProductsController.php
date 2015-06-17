@@ -90,7 +90,7 @@ class ProductsController extends AppController {
                                             (sum(p.deadline) * count(b.id))::integer as technician_deadline
                                         FROM products p
                                         LEFT JOIN bugs b on p.id = b.product_id
-                                        LEFT JOIN bug_tracker bt on b.bug_tracker_id = bt.id
+                                        LEFT JOIN bug_tracks bt on b.bug_track_id = bt.id
                                         LEFT JOIN situations s on s.id = bt.situation_id
                                         WHERE s.archived = false and p.id = :product_id '.@$sql ,$conditions);
         if($result[0][0]['deadline'] == null){

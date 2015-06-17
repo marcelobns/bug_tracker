@@ -1,4 +1,4 @@
-<div class="roles form">
+<div class="roles form col-md-8">
 <?php echo $this->Form->create('Role'); ?>
 	<fieldset>
 		<legend><?php echo __('Add Role'); ?></legend>
@@ -9,7 +9,7 @@
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
-<div class="actions">
+<div class="actions col-md-4">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 

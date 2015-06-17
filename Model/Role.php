@@ -8,11 +8,8 @@ App::uses('AppModel', 'Model');
  */
 class Role extends AppModel {
 
-/**
- * Validation rules
- *
- * @var array
- */
+	public $actsAs = array('AccessKit.Requester');
+
 	public $validate = array(
 		'name' => array(
 			'notEmpty' => array(
@@ -36,13 +33,6 @@ class Role extends AppModel {
 		),
 	);
 
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasMany associations
- *
- * @var array
- */
 	public $hasMany = array(
 		'Situation' => array(
 			'className' => 'Situation',
@@ -71,5 +61,4 @@ class Role extends AppModel {
 			'counterQuery' => ''
 		)
 	);
-
 }

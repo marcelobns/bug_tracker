@@ -1,4 +1,4 @@
-<?php echo $this->Html->link(' <i class="fa fa-refresh refresh"></i>', array('action' => 'index'), array('escape'=>false)); ?>
+<?php echo $this->Html->link('<i class="fa fa-refresh refresh"></i>', array('action' => 'index'), array('escape'=>false)); ?>
 <div class="pull-right">
     <?php echo $this->Form->create(@$model, array('action'=>'index/'.@$url_params, 'type'=>'GET', 'class'=>'form-inline', 'div'=>false)); ?>
     <div class="col-md-12">

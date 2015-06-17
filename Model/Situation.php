@@ -70,8 +70,8 @@ class Situation extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'BugTracker' => array(
-			'className' => 'BugTracker',
+		'BugTrack' => array(
+			'className' => 'BugTrack',
 			'foreignKey' => 'situation_id',
 			'dependent' => false,
 			'conditions' => '',

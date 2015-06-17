@@ -1,22 +1,25 @@
 @import "bootstrap.less";
 @import "prefixer.less";
+@import "selectize.bootstrap3.less";
 
 @font-family-sans-serif:  Consolas;
 @font-family-serif:       Consolas;
 @font-family-base:        @font-family-sans-serif;
+@font-size-base:          15px;
 
-@brand-primary: #374b6e;
+@brand-primary: #374b6E;
 @brand-success: #5cb85c;
 @brand-info:    #5bc0de;
 @brand-warning: #f0ad4e;
 @brand-danger:  #d9534f;
 
-@border-radius-small: 2px;
-@border-radius-base: 3px;
-@border-radius-large: 5px;
+@border-radius-small: 1px;
+@border-radius-base: 2px;
+@border-radius-large: 4px;
+
+@text-color: #000;
 
 body {
-  background-color: #fdfdfd;
   padding-top: 60px;
 }
 table{
@@ -33,9 +36,15 @@ th {
     content: ' ⇣';
   }
 }
+td {
+    padding: 3px!important;
+}
 td.actions, th.actions {
   text-align: center;
   white-space: nowrap;
+}
+td.actions a{
+  margin-left: 4px;
 }
 th.actions{
   font-size: 1.1em;
@@ -96,7 +105,7 @@ dd {
 }
 /** Form **/
 fieldset {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border: 1px solid #d0d0d0;
   padding: 1em!important;
 }
@@ -172,20 +181,35 @@ p.error {
   color: #fff;
   background: @brand-info;
 }
-
 /* BOOTSTRAP ADJUSTS */
-
 label{
   margin-bottom: 0px;
 }
 .form-control{
-  margin-bottom: 11px;
+  margin-bottom: 0px;
+  color: #000;
+  font-weight: bold;
 }
-
 .text-danger{
   color: @brand-danger;
 }
 
 .text-warning{
   color: @brand-warning;
+}
+label{
+  color: @gray;
+}
+/* Extras*/
+.uppercase{
+  text-transform:uppercase;
+}
+/* Selectize */
+.selectize-input {
+  font-weight: bold;
+}
+.selectize{
+  .option{
+    margin-left: 1%;
+  }
 }

@@ -1,24 +1,28 @@
-<div class="roles index">
+<div class="roles index col-md-8">
 	<h2><?php echo __('Roles'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
-	<tr>
+	<thead>
+		<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('sort'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
-	<?php foreach ($roles as $role): ?>
-	<tr>
-		<td><?php echo h($role['Role']['id']); ?>&nbsp;</td>
-		<td><?php echo h($role['Role']['name']); ?>&nbsp;</td>
-		<td><?php echo h($role['Role']['sort']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $role['Role']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $role['Role']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $role['Role']['id']), null, __('Are you sure you want to delete # %s?', $role['Role']['id'])); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
+	</thead>
+	<tbody>
+		<?php foreach ($roles as $role): ?>
+			<tr>
+				<td><?php echo h($role['Role']['id']); ?>&nbsp;</td>
+				<td><?php echo h($role['Role']['name']); ?>&nbsp;</td>
+				<td><?php echo h($role['Role']['sort']); ?>&nbsp;</td>
+				<td class="actions">
+					<?php echo $this->Html->link(__('View'), array('action' => 'view', $role['Role']['id'])); ?>
+					<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $role['Role']['id'])); ?>
+					<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $role['Role']['id']), null, __('Are you sure you want to delete # %s?', $role['Role']['id'])); ?>
+				</td>
+			</tr>
+		<?php endforeach; ?>
+	</tbody>
 	</table>
 	<p>
 	<?php
@@ -34,7 +38,7 @@
 	?>
 	</div>
 </div>
-<div class="actions">
+<div class="actions col-md-4">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Role'), array('action' => 'add')); ?></li>

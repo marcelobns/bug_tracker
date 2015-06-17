@@ -7,16 +7,18 @@ App::uses('AppModel', 'Model');
  * @property Organization $Organization
  */
 class User extends AppModel {
+	public $actsAs = array(
+		'AccessKit.Requester'=>array(
+			'Group'=>'Role',
+			'GroupKey'=>'role_id'
+			),
+		// 'AccessKit.Log'
+		);
 
 	public $validate = array(
 		'name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'email' => array(
@@ -96,7 +98,7 @@ class User extends AppModel {
                 $alias.'.name',
                 '(select count(b.id)
                 from bugs b
-                inner join bug_tracker bt on bt.id = b.bug_tracker_id
+                inner join bug_tracks bt on bt.id = b.bug_track_id
                 inner join situations s on s.id = bt.situation_id
                 where "'.ucfirst($alias).'".id = any(bt.technician_array) and s.archived = false) as "'.$alias.'__count"'
             ),

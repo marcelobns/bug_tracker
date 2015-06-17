@@ -3,6 +3,8 @@ App::uses('AppModel', 'Model');
 
 class Bug extends AppModel {
 
+	public $actsAs = array('AccessKit.Log');
+
 	public $validate = array(
 		'requestor' => array(
 			'notEmpty' => array(
@@ -27,11 +29,11 @@ class Bug extends AppModel {
 		'origin_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-                'notEmpty' => array(
-                    'rule' => array('notEmpty')
-                )
-            )
-        ),
+				'notEmpty' => array(
+					'rule' => array('notEmpty')
+				)
+			)
+		),
 	);
 
 	public $belongsTo = array(
@@ -42,24 +44,24 @@ class Bug extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-        'BugTracker' => array(
-            'className' => 'BugTracker',
-            'foreignKey' => 'bug_tracker_id',
-            'conditions' => '',
-            'fields' => '',
-            'order' => ''
-        ),
-        'Technician' => array(
-            'className' => 'User',
-            'foreignKey' => '',
-            'conditions' => array('BugTracker.technician_array[1] = Technician.id'),
-            'fields' => '',
-            'order' => ''
-        ),
+		'BugTrack' => array(
+			'className' => 'BugTrack',
+			'foreignKey' => 'bug_track_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Technician' => array(
+			'className' => 'User',
+			'foreignKey' => '',
+			'conditions' => array('BugTrack.technician_array[1] = Technician.id'),
+			'fields' => '',
+			'order' => ''
+		),
 		'Situation' => array(
 			'className' => 'Situation',
 			'foreignKey' => '',
-            'conditions' => array('BugTracker.situation_id = Situation.id'),
+			'conditions' => array('BugTrack.situation_id = Situation.id'),
 			'fields' => '',
 			'order' => ''
 		),
@@ -70,25 +72,25 @@ class Bug extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-        'Organization' => array(
-            'className' => 'Organization',
-            'foreignKey' => '',
-            'conditions' => array('BugTracker.organization_id = Organization.id'),
-            'fields' => '',
-            'order' => ''
-        ),
-        'Creator' => array(
-            'className' => 'User',
-            'foreignKey' => 'created_by',
-            'conditions' => '',
-            'fields' => '',
-            'order' => ''
-        )
+		'Organization' => array(
+			'className' => 'Organization',
+			'foreignKey' => '',
+			'conditions' => array('BugTrack.organization_id = Organization.id'),
+			'fields' => '',
+			'order' => ''
+		),
+		'Creator' => array(
+			'className' => 'User',
+			'foreignKey' => 'created_by',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
 	);
 
 	public $hasMany = array(
-		'BugTrackers' => array(
-			'className' => 'BugTracker',
+		'BugTrack' => array(
+			'className' => 'BugTrack',
 			'foreignKey' => 'bug_id',
 			'dependent' => false,
 			'conditions' => '',
