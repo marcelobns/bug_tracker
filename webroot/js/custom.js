@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $('.paging .next a, .paging .next.disabled').text('»');
 
     $('.text-uppercase').blur(function(e){
-        $('#'+e.currentTarget.id).val(($('#'+e.currentTarget.id).val()).toUpperCase());
+        e.currentTarget.value = e.currentTarget.value.toUpperCase();
     });
 
     $('.refresh').click(function(){
